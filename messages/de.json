@@ -1,0 +1,16 @@
+{
+  "main": {
+    "title": "GABRIEL LUCIC",
+    "subtitle": "Software Engineer spezialisiert auf Webanwendungen",
+    "location": "Basierend in München, Deutschland",
+    "downloadCV": "Lebenslauf herunterladen",
+    "contactMe": "Kontaktieren Sie mich"
+  },
+  "about": {
+    "name": "Gabriel Lucic",
+    "role": "Full Stack Software Engineer",
+    "intro": "Hallo, ich bin Gabriel Lucic – ein Softwareentwickler mit Sitz in München, Deutschland. In den letzten 7+ Jahren habe ich Backend-Systeme entwickelt und betreut, hauptsächlich mit PHP und Laravel, mit Fokus auf sauberen Code, Skalierbarkeit und langfristige Wartbarkeit.",
+    "experience": "Ich arbeite gerne in funktionsübergreifenden agilen Teams und habe Erfahrung mit Tools wie PostgreSQL, Docker, Kubernetes sowie etwas Java, Spring Boot und AngularJS.",
+    "goals": "Ich spreche fließend Englisch, Deutsch und Kroatisch und bin stets bestrebt, mich als Entwickler weiterzuentwickeln. Mein langfristiges Ziel ist es, mehr architektonische Verantwortung zu übernehmen und robuste, zukunftssichere Systeme mitzugestalten."
+  }
+}

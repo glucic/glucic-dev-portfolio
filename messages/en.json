@@ -1,0 +1,16 @@
+{
+  "main": {
+    "title": "GABRIEL LUCIC",
+    "subtitle": "Software Engineer Specializing in Web Applications",
+    "location": "Based in Munich, Germany",
+    "downloadCV": "Download my CV",
+    "contactMe": "Contact Me"
+  },
+  "about": {
+    "name": "Gabriel Lucic",
+    "role": "Full Stack Software Engineer",
+    "intro": "Hi, I’m Gabriel Lucic – a Software Developer based in Munich, Germany. I’ve spent the past 7+ years building and maintaining backend systems, mostly using PHP and Laravel, with a focus on clean code, scalability, and long-term maintainability.",
+    "experience": "I enjoy working in cross-functional Agile teams and have experience with tools like PostgreSQL, Docker, Kubernetes, and also some Java, Spring Boot, and AngularJS along the way.",
+    "goals": "I’m fluent in English, German, and Croatian, and always looking to grow as a developer. My long-term goal is to take on more architectural responsibilities and help shape solid, future-proof systems."
+  }
+}

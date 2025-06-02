@@ -3,12 +3,10 @@
 
 import {motion} from "framer-motion";
 import Link from "next/link";
-import {useState} from "react";
+import React from "react";
 import {GithubIcon, LinkedinIcon, InstagramIcon} from "next-share";
 
 export function ContactSection() {
-    const [showForm, setShowForm] = useState(false);
-
     return (
         <section
             id="contact"
@@ -20,8 +18,7 @@ export function ContactSection() {
                 transition={{duration: 0.5}}
                 className="text-slate-100 dark:text-slate-800"
             >
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold">YOU REACHED THE END</h2>
-                <p className="pt-3 text-xl sm:text-2xl">LET&apos;S GET IN TOUCH :)</p>
+                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold m-10">LET&apos;S GET IN TOUCH :)</h2>
             </motion.div>
 
             <motion.div
@@ -44,6 +41,9 @@ export function ContactSection() {
                         round
                     />
                 </Link>
+                <Link href="https://www.instagram.com/gabriellucic_">
+                    <InstagramIcon className="m-2 transition-all duration-300 hover:-translate-y-0.5" size={32} round/>
+                </Link>
             </motion.div>
 
             <motion.div
@@ -52,53 +52,13 @@ export function ContactSection() {
                 transition={{delay: 0.4}}
                 className="z-10 mt-4"
             >
-                <button
-                    onClick={() => setShowForm(true)}
+                <a
+                    href="mailto:gabriellucic@protonmail.com?subject=Portfolio%20Contact&body=Hi%20Gabriel%2C"
                     className="rounded-lg bg-white px-6 py-3 font-semibold text-gray-800 transition-all hover:scale-105 hover:bg-gray-200 dark:bg-black dark:text-white dark:hover:bg-gray-800"
                 >
                     Send a Message
-                </button>
+                </a>
             </motion.div>
-
-            {showForm && (
-                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
-                    <div className="rounded-lg bg-white p-6 shadow-xl w-full max-w-md text-left">
-                        <h3 className="text-lg font-bold mb-4">Contact Me</h3>
-                        <form onSubmit={(e) => {
-                            e.preventDefault();
-                            setShowForm(false);
-                        }}>
-                            <label className="block mb-2 text-sm font-medium">Your Email</label>
-                            <input
-                                type="email"
-                                required
-                                className="w-full rounded border border-gray-300 px-4 py-2 mb-4"
-                            />
-                            <label className="block mb-2 text-sm font-medium">Message</label>
-                            <textarea
-                                required
-                                rows={4}
-                                className="w-full rounded border border-gray-300 px-4 py-2 mb-4"
-                            />
-                            <div className="flex justify-end gap-2">
-                                <button
-                                    type="button"
-                                    onClick={() => setShowForm(false)}
-                                    className="px-4 py-2 rounded bg-gray-300 hover:bg-gray-400"
-                                >
-                                    Cancel
-                                </button>
-                                <button
-                                    type="submit"
-                                    className="px-4 py-2 rounded bg-blue-600 text-white hover:bg-blue-700"
-                                >
-                                    Send
-                                </button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            )}
         </section>
     );
 }

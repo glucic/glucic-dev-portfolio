@@ -1,6 +1,4 @@
-import {NavBody, NavItems} from "@/components/ui/resizable-navbar";
 import React from "react";
-import {navItems} from "@/components/elements/NavigationBar";
 
 export const FooterSection = () => {
     return (
@@ -10,14 +8,6 @@ export const FooterSection = () => {
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                     &copy; {new Date().getFullYear()} Gabriel Lucic — Software Engineer | Based in München, Germany
                 </p>
-
-                <div className="flex justify-center md:justify-end">
-                    <NavBody>
-                        <div className="flex flex-wrap gap-4">
-                            <NavItems items={navItems}/>
-                        </div>
-                    </NavBody>
-                </div>
             </div>
         </footer>
     );

@@ -1,41 +1,37 @@
 // components/AboutSection.tsx
+"use client";
+
 import Image from "next/image";
-import { SkillBadge } from "@/components/elements/SkillBadges";
 
-export function AboutSection() {
-    const skills = [
-        "PHP",
-        "Laravel",
-        "Symfony",
-        "Postgresql",
-        "Docker",
-        "Kubernetes",
-        "JavaScript",
-        "AngularJS",
-        "Java",
-        "Spring Boot"
-    ];
+export interface AboutSectionDict {
+    about: {
+        name: string;
+        role: string;
+        intro: string;
+        experience: string;
+        goals: string;
+    };
+}
 
+export function AboutSection({dict}: { dict: AboutSectionDict }) {
     return (
-        <section id="about" className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 max-w-7xl mx-auto">
+        <section
+            id="about"
+            className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 max-w-7xl mx-auto"
+        >
             <div className="flex-1 text-center md:text-left">
-                <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2">Gabriel Lucic</h2>
-                <p className="roboto-thin text-xl sm:text-2xl text-gray-700 mb-4">Full Stack Software Engineer</p>
-
-                <div className="flex flex-wrap justify-center md:justify-start gap-2 py-4">
-                    {skills.map((tech, idx) => (
-                        <SkillBadge key={idx} tech={tech} />
-                    ))}
-                </div>
-
-                <p className="text-sm sm:text-base leading-relaxed text-gray-800">
-                    I'm an experienced Software Developer with over 7 years of hands-on experience in backend development, primarily using PHP and Laravel. I have a strong foundation in building and maintaining scalable systems within structured, agile teams.
-                    <br /><br />
-                    I'm highly proficient with technologies like PHP, Laravel, Symfony, PostgreSQL, Docker, and Kubernetes, and have additional experience working with JavaScript, Node.js, Java, Spring Boot, and AngularJS.
-                    <br /><br />
-                    Beyond technical skills, I bring a strong sense of ownership, a deep understanding of clean and maintainable code, and the ability to contribute to long-term software architecture. I’ve collaborated across teams, participated in migrating legacy monoliths into modern systems, and worked closely with UX teams to ensure user-centered solutions.
-                    <br /><br />
-                    Fluent in English, German, and Croatian, I thrive in multicultural environments and agile workflows. My ambition is to grow into a Lead Software Architect role, where I can take a broader responsibility for the design and evolution of complex systems.
+                <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2">
+                    {dict.about.name}
+                </h2>
+                <p className="roboto-thin text-xl sm:text-2xl text-gray-700 mb-4">
+                    {dict.about.role}
+                </p>
+                <p className="text-sm sm:text-base leading-relaxed text-gray-800 space-y-4">
+                    <span>{dict.about.intro}</span>
+                    <br/><br/>
+                    <span>{dict.about.experience}</span>
+                    <br/><br/>
+                    <span>{dict.about.goals}</span>
                 </p>
             </div>
 

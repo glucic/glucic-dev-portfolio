@@ -23,7 +23,7 @@ const experienceData = [
                     </a>
                 </p>
                 <p className="text-sm text-gray-500 flex items-center gap-1">
-                    <MapPin size={16} className="text-gray-500" />
+                    <MapPin size={16} className="text-gray-500"/>
                     Munich, Germany
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 py-4">
@@ -37,7 +37,7 @@ const experienceData = [
                     <SkillBadge tech="Kubernetes"/>
                 </div>
                 <p>
-                    Took ownership of a Symfony-based project while also maintaining our Laravel self-contained service.
+                    Took ownership of a Symfony-based project while also maintaining a live Laravel-based service.
                     Balanced development of new features with critical refactoring and stability improvements.
                     Worked daily with PHP (Symfony, Laravel), containerized environments
                     (Docker, Kubernetes), and collaborated closely with product and QA teams. This role deepened my
@@ -65,7 +65,7 @@ const experienceData = [
                     </a>
                 </p>
                 <p className="text-sm text-gray-500 flex items-center gap-1">
-                    <MapPin size={16} className="text-gray-500" />
+                    <MapPin size={16} className="text-gray-500"/>
                     Munich, Germany
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 py-4">
@@ -116,7 +116,7 @@ const experienceData = [
                     </a>
                 </p>
                 <p className="text-sm text-gray-500 flex items-center gap-1">
-                    <MapPin size={16} className="text-gray-500" />
+                    <MapPin size={16} className="text-gray-500"/>
                     Munich, Germany
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 py-4">
@@ -147,7 +147,7 @@ const experienceData = [
         content: (
             <div className="text-base sm:text-lg md:text-xl">
                 <div className="flex items-center gap-2 mb-1 text-2xl font-semibold">
-                    <span>Intern (Apprenticeship)</span>
+                    <span>Internship</span>
                 </div>
                 <p className="text-lg text-gray-600 mb-2">
                     <a href="https://www.compleet.com" target="_blank" rel="noopener noreferrer"
@@ -156,7 +156,7 @@ const experienceData = [
                     </a>
                 </p>
                 <p className="text-sm text-gray-500 flex items-center gap-1">
-                    <MapPin size={16} className="text-gray-500" />
+                    <MapPin size={16} className="text-gray-500"/>
                     Munich, Germany
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 py-4">
@@ -168,10 +168,22 @@ const experienceData = [
                     <SkillBadge tech="Postgresql"/>
                 </div>
                 <p className="mb-4">
-                    Completed a three-year apprenticeship while studying, developing a full-stack application with Zend,
-                    AngularJS, and PostgreSQL. Learned the fundamentals of end-to-end software development and Agile
-                    methodologies, gaining experience in diverse technical environments.
+                    Worked as an Intern (while still studying), building a full-stack
+                    application with PHP, AngularJS, and PostgreSQL. That hands-on experience taught me the
+                    fundamentals of end-to-end software development and Agile team workflows. Along the way, I took
+                    initiative and learned to collaborate effectively, which helped me grow my technical know-how and
+                    communication skills.
                 </p>
+                <div className="mb-4">
+                    <a
+                        href="diploma.pdf"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="rounded-lg bg-black px-6 py-2 font-small text-white transition duration-300 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200"
+                    >
+                        Show Diploma
+                    </a>
+                </div>
             </div>
         )
     }

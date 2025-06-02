@@ -1,0 +1,30 @@
+// app/[lang]/layout.tsx
+import {ReactNode} from 'react';
+import {Roboto} from 'next/font/google';
+import '../globals.css';
+
+const roboto = Roboto({
+    subsets: ['latin'],
+    weight: ['300', '400', '500', '700'],
+    variable: '--font-roboto',
+});
+
+export async function generateStaticParams() {
+    return [{lang: 'en'}, {lang: 'de'}];
+}
+
+export default async function LocaleLayout({
+                                               children,
+                                               params,
+                                           }: {
+    children: ReactNode;
+    params: Promise<{ lang: string }>;
+}) {
+    const {lang} = await params;
+
+    return (
+        <html lang={lang} className={roboto.variable}>
+        <body className="font-sans antialiased">{children}</body>
+        </html>
+    );
+}

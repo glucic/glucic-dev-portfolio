@@ -3,7 +3,9 @@
 
 @custom-variant dark (&:is(.dark *));
 
-html, body {
+.language-switcher {
+  position: relative;
+  z-index: 10;
 }
 
 :root {

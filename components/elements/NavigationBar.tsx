@@ -1,29 +1,32 @@
-"use client";
+// components/elements/NavigationBar.tsx
+'use client';
+
 import {
     Navbar,
     NavBody,
     NavItems,
     MobileNav,
-    NavbarButton,
     MobileNavHeader,
     MobileNavToggle,
-    MobileNavMenu, NavbarLogo,
-} from "@/components/ui/resizable-navbar";
-import {useState} from "react";
+    MobileNavMenu,
+    NavbarLogo,
+} from '@/components/ui/resizable-navbar';
+import { useState } from 'react';
+import LanguageSwitcher from '@/components/elements/LanguageSwitcher';
 
 export const navItems = [
     {
-        name: "About",
-        link: "#about",
+        name: 'About',
+        link: '#about',
     },
     {
-        name: "Experience",
-        link: "#experience",
+        name: 'Experience',
+        link: '#experience',
     },
     {
-        name: "Contact",
-        link: "#contact",
-    }
+        name: 'Contact',
+        link: '#contact',
+    },
 ];
 
 export function NavigationBar() {
@@ -34,15 +37,16 @@ export function NavigationBar() {
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody>
-                    <NavbarLogo/>
+                    <NavbarLogo />
                     <div className="flex items-center gap-4">
-                        <NavItems items={navItems}/>
+                        <NavItems items={navItems} />
                     </div>
+                    <LanguageSwitcher />
                 </NavBody>
 
                 {/* Mobile Navigation */}
                 <MobileNav>
-                    <NavbarLogo/>
+                    <NavbarLogo />
                     <MobileNavHeader>
                         <MobileNavToggle
                             isOpen={isMobileMenuOpen}
@@ -64,6 +68,9 @@ export function NavigationBar() {
                                 <span className="block">{item.name}</span>
                             </a>
                         ))}
+                        <div className="mt-4">
+                            <LanguageSwitcher />
+                        </div>
                     </MobileNavMenu>
                 </MobileNav>
             </Navbar>
