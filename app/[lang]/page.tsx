@@ -26,7 +26,7 @@ export default async function Page({
             <NavigationBar />
             <MainSection dict={dict}/>
             <AboutSection dict={dict}/>
-            <ExperienceSection/>
+            <ExperienceSection dict={dict}/>
             <ContactSection/>
             <FooterSection/>
         </div>

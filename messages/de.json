@@ -12,5 +12,80 @@
     "intro": "Hallo, ich bin Gabriel Lucic – ein Softwareentwickler mit Sitz in München, Deutschland. In den letzten 7+ Jahren habe ich Backend-Systeme entwickelt und betreut, hauptsächlich mit PHP und Laravel, mit Fokus auf sauberen Code, Skalierbarkeit und langfristige Wartbarkeit.",
     "experience": "Ich arbeite gerne in funktionsübergreifenden agilen Teams und habe Erfahrung mit Tools wie PostgreSQL, Docker, Kubernetes sowie etwas Java, Spring Boot und AngularJS.",
     "goals": "Ich spreche fließend Englisch, Deutsch und Kroatisch und bin stets bestrebt, mich als Entwickler weiterzuentwickeln. Mein langfristiges Ziel ist es, mehr architektonische Verantwortung zu übernehmen und robuste, zukunftssichere Systeme mitzugestalten."
+  },
+  "experience": {
+    "title": "Erfahrung",
+    "entries": {
+      "intermediate": {
+        "date": "04.2025 - Heute",
+        "duration": "Aktuell",
+        "role": "Intermediate Softwareentwickler",
+        "company": "compleet GmbH",
+        "location": "München, Deutschland",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Laravel",
+          "Symfony",
+          "Postgresql",
+          "Docker",
+          "Kubernetes"
+        ],
+        "description": "Verantwortlich für ein Symfony-basiertes Projekt und gleichzeitig Betreuung eines laufenden Laravel-Dienstes. Neue Funktionen entwickelt und bestehende Systeme refaktoriert sowie stabilisiert. Tägliche Arbeit mit PHP (Symfony, Laravel) und containerisierten Umgebungen (Docker, Kubernetes), enge Zusammenarbeit mit Produkt- und QA-Teams. Diese Rolle vertiefte mein Verständnis für Servicearchitektur und produktionsreife Entwicklung."
+      },
+      "associate": {
+        "date": "03.2023 - 04.2025",
+        "duration": "2 Jahre",
+        "role": "Associate Softwareentwickler",
+        "company": "compleet GmbH",
+        "location": "München, Deutschland",
+        "tech": [
+          "HTML",
+          "CSS",
+          "Java",
+          "Spring Boot",
+          "PHP",
+          "Laravel",
+          "Postgresql",
+          "DynamoDB",
+          "Docker",
+          "Kubernetes"
+        ],
+        "description": "Beteiligung an zwei Projekten zur Modernisierung von Altsystemen. Entwicklung eines skalierbaren Backends mit Spring Boot, inklusive REST-APIs und Authentifizierungsfunktionen. Deployment mit Docker und Kubernetes. Integration mit Partnern wie Indeed und Stepstone über eigene APIs. Langfristiges Laravel-Projekt zur Ablösung eines monolithischen Systems – Kundenfunktionen entwickelt, Produktionsreife sichergestellt."
+      },
+      "developer": {
+        "date": "07.2021 - 03.2023",
+        "duration": "2 Jahre",
+        "role": "Softwareentwickler",
+        "company": "compleet GmbH",
+        "location": "München, Deutschland",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Zend",
+          "Postgresql",
+          "Docker"
+        ],
+        "description": "Arbeit an B2B-Webplattformen im Bereich Recruiting und Workforce Management. Pflege und Weiterentwicklung einer Legacy-PHP-Anwendung mit Zend Framework. Alte Module refaktoriert, neue Funktionen implementiert, Bugs behoben. Mitwirkung bei der Umstellung auf containerisierte Microservices."
+      },
+      "intern": {
+        "date": "08.2018 - 07.2021",
+        "duration": "3 Jahre",
+        "role": "Praktikum",
+        "company": "compleet GmbH (ehemals GermanPersonnel e-search GmbH)",
+        "location": "München, Deutschland",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "JavaScript",
+          "AngularJS",
+          "Postgresql"
+        ],
+        "description": "Praktikum während des Studiums – Entwicklung einer Full-Stack-Anwendung mit PHP, AngularJS und PostgreSQL. Praktische Erfahrung in der End-to-End-Entwicklung und in agilen Teams gesammelt. Eigeninitiative gezeigt, gut im Team zusammengearbeitet und technische sowie kommunikative Fähigkeiten verbessert."
+      }
+    }
   }
 }

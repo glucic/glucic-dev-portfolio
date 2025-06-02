@@ -12,5 +12,80 @@
     "intro": "Hi, I’m Gabriel Lucic – a Software Developer based in Munich, Germany. I’ve spent the past 7+ years building and maintaining backend systems, mostly using PHP and Laravel, with a focus on clean code, scalability, and long-term maintainability.",
     "experience": "I enjoy working in cross-functional Agile teams and have experience with tools like PostgreSQL, Docker, Kubernetes, and also some Java, Spring Boot, and AngularJS along the way.",
     "goals": "I’m fluent in English, German, and Croatian, and always looking to grow as a developer. My long-term goal is to take on more architectural responsibilities and help shape solid, future-proof systems."
+  },
+  "experience": {
+    "title": "Experience",
+    "entries": {
+      "intermediate": {
+        "date": "04.2025 - Present",
+        "duration": "Ongoing",
+        "role": "Intermediate Software Developer",
+        "company": "compleet GmbH",
+        "location": "Munich, Germany",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Laravel",
+          "Symfony",
+          "Postgresql",
+          "Docker",
+          "Kubernetes"
+        ],
+        "description": "Took ownership of a Symfony-based project while also maintaining a live Laravel-based service. Balanced development of new features with critical refactoring and stability improvements. Worked daily with PHP (Symfony, Laravel), containerized environments (Docker, Kubernetes), and collaborated closely with product and QA teams. This role deepened my understanding of service architecture and production-ready development."
+      },
+      "associate": {
+        "date": "03.2023 - 04.2025",
+        "duration": "2 Years",
+        "role": "Associate Software Developer",
+        "company": "compleet GmbH",
+        "location": "Munich, Germany",
+        "tech": [
+          "HTML",
+          "CSS",
+          "Java",
+          "Spring Boot",
+          "PHP",
+          "Laravel",
+          "Postgresql",
+          "DynamoDB",
+          "Docker",
+          "Kubernetes"
+        ],
+        "description": "Was a part of two projects focused on modernizing legacy systems. Built a scalable backend using Spring Boot, developed REST APIs and authentication features, and deployed the service using Docker and Kubernetes. Integrated with enterprise partners like Indeed and Stepstone through custom APIs. Worked on a long-term Laravel project to replace a critical part of a large monolithic system, contributing major customer-facing features and ensuring production readiness."
+      },
+      "developer": {
+        "date": "07.2021 - 03.2023",
+        "duration": "2 Years",
+        "role": "Software Developer",
+        "company": "compleet GmbH",
+        "location": "Munich, Germany",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Zend",
+          "Postgresql",
+          "Docker"
+        ],
+        "description": "Worked on B2B web platforms in the recruiting and workforce management domain. Maintained and extended a legacy PHP application using Zend Framework. Refactored older modules, implemented new features, fixed bugs, and contributed to transitioning parts of the monolith to containerized microservices."
+      },
+      "intern": {
+        "date": "08.2018 - 07.2021",
+        "duration": "3 Years",
+        "role": "Internship",
+        "company": "compleet GmbH (formerly GermanPersonnel e-search GmbH)",
+        "location": "Munich, Germany",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "JavaScript",
+          "AngularJS",
+          "Postgresql"
+        ],
+        "description": "Worked as an intern (while studying), building a full-stack application with PHP, AngularJS, and PostgreSQL. Gained hands-on experience in end-to-end development and Agile workflows. Took initiative, collaborated with teams, and improved technical and communication skills."
+      }
+    }
   }
 }
