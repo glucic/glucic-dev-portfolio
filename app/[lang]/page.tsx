@@ -6,6 +6,7 @@ import {
     ExperienceSection,
     ContactSection,
     FooterSection,
+    SkillsSection,
 } from '@/components/sections';
 import {NavigationBar} from "@/components/elements/NavigationBar";
 
@@ -23,9 +24,10 @@ export default async function Page({
 
     return (
         <div>
-            <NavigationBar />
+            <NavigationBar/>
             <MainSection dict={dict}/>
             <AboutSection dict={dict}/>
+            <SkillsSection dict={dict}/>
             <ExperienceSection dict={dict}/>
             <ContactSection/>
             <FooterSection/>

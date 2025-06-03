@@ -1,7 +1,28 @@
 {
   "main": {
     "title": "GABRIEL LUCIC",
-    "subtitle": "Software Engineer Specializing in Web Applications",
+    "subtitle": [
+      {
+        "text": "Software"
+      },
+      {
+        "text": "Engineer"
+      },
+      {
+        "text": "Specializing"
+      },
+      {
+        "text": "in"
+      },
+      {
+        "text": "Web",
+        "className": "text-blue-500 dark:text-blue-500"
+      },
+      {
+        "text": "Applications.",
+        "className": "text-blue-500 dark:text-blue-500"
+      }
+    ],
     "location": "Based in Munich, Germany",
     "downloadCV": "Download my CV",
     "contactMe": "Contact Me"
@@ -12,6 +33,32 @@
     "intro": "Hi, I’m Gabriel Lucic – a Software Developer based in Munich, Germany. I’ve spent the past 7+ years building and maintaining backend systems, mostly using PHP and Laravel, with a focus on clean code, scalability, and long-term maintainability.",
     "experience": "I enjoy working in cross-functional Agile teams and have experience with tools like PostgreSQL, Docker, Kubernetes, and also some Java, Spring Boot, and AngularJS along the way.",
     "goals": "I’m fluent in English, German, and Croatian, and always looking to grow as a developer. My long-term goal is to take on more architectural responsibilities and help shape solid, future-proof systems."
+  },
+  "skills": {
+    "headline": "My areas of expertise",
+    "subtext": "My comprehensive services are custom-tailored to meet your unique business goals and objectives.",
+    "skills": [
+      {
+        "title": "Web Development",
+        "description": "Modern frontend with AngularJS, Next.js & Tailwind.",
+        "icon": "tabler:browser"
+      },
+      {
+        "title": "Backend Development",
+        "description": "Robust APIs with Laravel, Spring Boot & PostgreSQL.",
+        "icon": "tabler:server-2"
+      },
+      {
+        "title": "Software Architecture",
+        "description": "Experience designing scalable systems.",
+        "icon": "tabler:building-architecture"
+      },
+      {
+        "title": "Teamwork",
+        "description": "Strong communication in agile teams.",
+        "icon": "tabler:users-group"
+      }
+    ]
   },
   "experience": {
     "title": "Experience",

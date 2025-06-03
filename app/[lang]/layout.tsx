@@ -1,7 +1,8 @@
 // app/[lang]/layout.tsx
 import {ReactNode} from 'react';
 import {Roboto} from 'next/font/google';
-import '../globals.css';
+import '@/app/globals.css';
+import {Metadata} from "next";
 
 const roboto = Roboto({
     subsets: ['latin'],
@@ -12,6 +13,19 @@ const roboto = Roboto({
 export async function generateStaticParams() {
     return [{lang: 'en'}, {lang: 'de'}];
 }
+
+export const metadata: Metadata = {
+    title: "Gabriel Lucic",
+    description: "Portfolio Page created using Next.js",
+    icons: {
+        icon: [
+            {
+                url: "/icon.svg",
+                href: "/icon.svg",
+            },
+        ],
+    },
+};
 
 export default async function LocaleLayout({
                                                children,

@@ -5,12 +5,15 @@ import {motion} from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import {GithubIcon, InstagramIcon, LinkedinIcon} from "next-share";
+import {TypewriterEffectSmooth} from "../ui/typewriter-effect";
 
-// types.ts
 export interface MainSectionDict {
     main: {
         title: string;
-        subtitle: string;
+        subtitle: Array<{
+            text: string;
+            className?: string;
+        }>;
         location: string;
         downloadCV: string;
         contactMe: string;
@@ -32,14 +35,9 @@ export function MainSection({dict}: { dict: MainSectionDict }) {
                 {dict.main.title}
             </motion.h1>
 
-            <motion.p
-                initial={{opacity: 0, y: 20}}
-                animate={{opacity: 1, y: [20, -5, 0]}}
-                transition={{duration: 0.6, delay: 0.1}}
-                className="roboto-thin text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-slate-800 mt-4"
-            >
-                {dict.main.subtitle}
-            </motion.p>
+            <TypewriterEffectSmooth
+                className="roboto text-2xl sm:text-4xl md:text-3xl text-gray-700 dark:text-slate-800 mt-4"
+                words={dict.main.subtitle}/>
 
             <p className="roboto-thin text-xl sm:text-2xl text-gray-600 mt-4">
                 {dict.main.location}

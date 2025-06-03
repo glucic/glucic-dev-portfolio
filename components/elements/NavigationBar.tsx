@@ -20,6 +20,10 @@ export const navItems = [
         link: '#about',
     },
     {
+        name: 'Skills',
+        link: '#skills'
+    },
+    {
         name: 'Experience',
         link: '#experience',
     },

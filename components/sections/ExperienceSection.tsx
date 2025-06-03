@@ -61,7 +61,11 @@ export function ExperienceSection({dict}: ExperienceSectionProps) {
 
     return (
         <section id="experience" className="w-full px-6 py-12 max-w-7xl mx-auto">
-            <h2 className="text-4xl font-bold mb-8 text-center">{dict.experience.title}</h2>
+            <div className="mb-8 md:mb-12 md:mx-auto text-center max-w-3xl">
+                <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl">
+                    {dict.experience.title}
+                </h2>
+            </div>
             <Timeline data={experienceData} />
         </section>
     );

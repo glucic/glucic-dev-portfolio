@@ -1,7 +1,24 @@
 {
   "main": {
     "title": "GABRIEL LUCIC",
-    "subtitle": "Software Engineer spezialisiert auf Webanwendungen",
+    "subtitle": [
+      {
+        "text": "Software"
+      },
+      {
+        "text": "Engineer"
+      },
+      {
+        "text": "spezialisiert"
+      },
+      {
+        "text": "auf"
+      },
+      {
+        "text": "Webanwendungen.",
+        "className": "text-blue-500 dark:text-blue-500"
+      }
+    ],
     "location": "Basierend in München, Deutschland",
     "downloadCV": "Lebenslauf herunterladen",
     "contactMe": "Kontaktieren Sie mich"
@@ -12,6 +29,32 @@
     "intro": "Hallo, ich bin Gabriel Lucic – ein Softwareentwickler mit Sitz in München, Deutschland. In den letzten 7+ Jahren habe ich Backend-Systeme entwickelt und betreut, hauptsächlich mit PHP und Laravel, mit Fokus auf sauberen Code, Skalierbarkeit und langfristige Wartbarkeit.",
     "experience": "Ich arbeite gerne in funktionsübergreifenden agilen Teams und habe Erfahrung mit Tools wie PostgreSQL, Docker, Kubernetes sowie etwas Java, Spring Boot und AngularJS.",
     "goals": "Ich spreche fließend Englisch, Deutsch und Kroatisch und bin stets bestrebt, mich als Entwickler weiterzuentwickeln. Mein langfristiges Ziel ist es, mehr architektonische Verantwortung zu übernehmen und robuste, zukunftssichere Systeme mitzugestalten."
+  },
+  "skills": {
+    "headline": "Meine Fachgebiete",
+    "subtext": "Meine umfassenden Leistungen sind individuell auf Ihre geschäftlichen Ziele abgestimmt.",
+    "skills": [
+      {
+        "title": "Webentwicklung",
+        "description": "Moderne Frontends mit AngularJS, Next.js & Tailwind.",
+        "icon": "tabler:browser"
+      },
+      {
+        "title": "Backend-Entwicklung",
+        "description": "Stabile APIs mit Laravel, Spring Boot & PostgreSQL.",
+        "icon": "tabler:server-2"
+      },
+      {
+        "title": "Softwarearchitektur",
+        "description": "Erfahrung in der Planung skalierbarer Systeme.",
+        "icon": "tabler:building-architecture"
+      },
+      {
+        "title": "Teamarbeit",
+        "description": "Effektive Kommunikation in agilen Teams.",
+        "icon": "tabler:users-group"
+      }
+    ]
   },
   "experience": {
     "title": "Erfahrung",
