@@ -10,7 +10,7 @@ export function ContactSection() {
     return (
         <section
             id="contact"
-            className="h-screen relative flex flex-col items-center justify-center min-h-screen gap-6 bg-gray-700 px-6 py-16 text-center"
+            className="min-h-screen relative flex flex-col items-center justify-center min-h-screen gap-6 bg-gray-700 px-6 py-16 text-center"
         >
             <motion.div
                 initial={{opacity: 0, y: 20}}

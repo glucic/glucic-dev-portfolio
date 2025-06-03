@@ -17,7 +17,7 @@ export function AboutSection({dict}: { dict: AboutSectionDict }) {
     return (
         <section
             id="about"
-            className="h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 max-w-7xl mx-auto"
+            className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 max-w-7xl mx-auto"
         >
             <div className="flex-1 text-center md:text-left">
                 <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2">

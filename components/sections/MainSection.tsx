@@ -24,7 +24,7 @@ export function MainSection({dict}: { dict: MainSectionDict }) {
     return (
         <section
             id="main"
-            className="h-screen flex flex-col items-center justify-center px-6 py-16 text-center"
+            className="min-h-screen flex flex-col items-center justify-center px-6 py-16 text-center"
         >
             <motion.h1
                 initial={{opacity: 0, y: 20}}

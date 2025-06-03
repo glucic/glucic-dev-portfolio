@@ -15,11 +15,13 @@ export interface SkillsSectionDict {
 }
 
 export function SkillsSection({dict}: { dict: SkillsSectionDict }) {
+
     return (
         <section
             id="skills"
-            className="h-screen w-full px-6 py-20 max-w-7xl mx-auto flex flex-col items-center justify-center text-center"
+            className="min-h-screen w-full px-6 py-20 max-w-7xl mx-auto flex flex-col items-center justify-center text-center"
         >
+
             <div className="mb-8 md:mb-12 md:mx-auto text-center max-w-3xl">
                 <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl">
                     {dict.skills.headline}
