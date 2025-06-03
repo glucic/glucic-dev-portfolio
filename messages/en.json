@@ -1,7 +1,8 @@
 {
   "main": {
     "title": "GABRIEL LUCIC",
-    "subtitle": [
+    "subtitle": "Software Engineer Specializing in Web Applications.",
+    "typewriterSubtitle": [
       {
         "text": "Software"
       },
@@ -39,24 +40,26 @@
     "subtext": "My comprehensive services are custom-tailored to meet your unique business goals and objectives.",
     "skills": [
       {
-        "title": "Web Development",
-        "description": "Modern frontend with AngularJS, Next.js & Tailwind.",
-        "icon": "tabler:browser"
-      },
-      {
         "title": "Backend Development",
         "description": "Robust APIs with Laravel, Spring Boot & PostgreSQL.",
-        "icon": "tabler:server-2"
+        "icon": "backend.svg",
+        "tech": ["Laravel", "Spring", "Postgresql"]
+      },
+      {
+        "title": "Web Development",
+        "description": "Modern frontend with AngularJS, Next.js & Tailwind.",
+        "icon": "frontend.svg",
+        "tech": ["AngularJS", "Tailwind", "NextJS"]
       },
       {
         "title": "Software Architecture",
         "description": "Experience designing scalable systems.",
-        "icon": "tabler:building-architecture"
+        "icon": "architecture.svg"
       },
       {
         "title": "Teamwork",
         "description": "Strong communication in agile teams.",
-        "icon": "tabler:users-group"
+        "icon": "teamwork.svg"
       }
     ]
   },
@@ -68,6 +71,7 @@
         "duration": "Ongoing",
         "role": "Intermediate Software Developer",
         "company": "compleet GmbH",
+        "link": "https://www.compleet.com",
         "location": "Munich, Germany",
         "tech": [
           "HTML",
@@ -86,12 +90,13 @@
         "duration": "2 Years",
         "role": "Associate Software Developer",
         "company": "compleet GmbH",
+        "link": "https://www.compleet.com",
         "location": "Munich, Germany",
         "tech": [
           "HTML",
           "CSS",
           "Java",
-          "Spring Boot",
+          "Spring",
           "PHP",
           "Laravel",
           "Postgresql",
@@ -106,6 +111,7 @@
         "duration": "2 Years",
         "role": "Software Developer",
         "company": "compleet GmbH",
+        "link": "https://www.compleet.com",
         "location": "Munich, Germany",
         "tech": [
           "HTML",
@@ -122,6 +128,7 @@
         "duration": "3 Years",
         "role": "Internship",
         "company": "compleet GmbH (formerly GermanPersonnel e-search GmbH)",
+        "link": "https://www.compleet.com",
         "location": "Munich, Germany",
         "tech": [
           "HTML",

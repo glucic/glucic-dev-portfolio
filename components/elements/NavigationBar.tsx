@@ -1,4 +1,3 @@
-// components/elements/NavigationBar.tsx
 'use client';
 
 import {
@@ -37,7 +36,7 @@ export function NavigationBar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className="relative w-full px-3 py-10">
+        <div className="relative w-full px-3 py-4 sm:py-6 md:py-10">
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody>
@@ -61,15 +60,16 @@ export function NavigationBar() {
                     <MobileNavMenu
                         isOpen={isMobileMenuOpen}
                         onClose={() => setIsMobileMenuOpen(false)}
+                        className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6"
                     >
                         {navItems.map((item, idx) => (
                             <a
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative text-neutral-600 dark:text-neutral-300"
+                                className="block text-base text-neutral-700 dark:text-neutral-300 py-2 transition-colors hover:text-black dark:hover:text-white"
                             >
-                                <span className="block">{item.name}</span>
+                                {item.name}
                             </a>
                         ))}
                         <div className="mt-4">

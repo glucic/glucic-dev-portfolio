@@ -1,6 +1,8 @@
 "use client";
 
 import {motion} from "framer-motion";
+import Image from "next/image";
+import {SkillBadge} from "@/components/elements/SkillBadges";
 
 export interface SkillsSectionDict {
     skills: {
@@ -10,6 +12,7 @@ export interface SkillsSectionDict {
             title: string;
             description: string;
             icon: string;
+            tech?: Array<string>
         }>;
     }
 }
@@ -36,17 +39,26 @@ export function SkillsSection({dict}: { dict: SkillsSectionDict }) {
                         key={index}
                         whileHover={{scale: 1.05, y: -4}}
                         transition={{type: "spring", stiffness: 300, damping: 15}}
-                        className="flex items-start gap-6 p-6 rounded-2xl bg-white dark:bg-zinc-900 shadow-lg hover:shadow-xl transition"
+                        className="flex items-center gap-6 p-6 rounded-2xl bg-white dark:bg-zinc-900 shadow-lg hover:shadow-xl transition"
                     >
-                        <div className="p-4 rounded-full bg-primary text-white dark:bg-black shrink-0">
-                            <svg className="w-10 h-10" viewBox="0 0 24 24" fill="none">
-                                <use href={`#ai:${skill.icon}`}/>
-                            </svg>
+                        <div className="p-4 rounded-full text-white bg-transparent shrink-0">
+                            <Image
+                                src={`svg/${skill.icon}`}
+                                alt="Icon"
+                                width={46}
+                                height={46}
+                                className="align-middle"
+                            />
                         </div>
                         <div className="text-left">
                             <h3 className="text-xl font-semibold text-black dark:text-white">
                                 {skill.title}
                             </h3>
+                            <div className="flex flex-wrap justify-start gap-2">
+                                {skill.tech?.map((techItem, i) => (
+                                    <SkillBadge key={i} tech={techItem}/>
+                                ))}
+                            </div>
                             <p className="text-base mt-2 text-gray-600 dark:text-gray-400">
                                 {skill.description}
                             </p>

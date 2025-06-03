@@ -1,5 +1,7 @@
-// components/SkillBadge.tsx
-import React from "react";
+'use client';
+
+import React, {useState} from 'react';
+import {motion, AnimatePresence} from 'framer-motion';
 import {
     SiPhp,
     SiLaravel,
@@ -14,37 +16,119 @@ import {
     SiHtml5,
     SiCss3,
     SiZend,
-    SiAmazondynamodb
-} from "react-icons/si";
+    SiAmazondynamodb,
+    SiTailwindcss,
+} from 'react-icons/si';
+import Image from 'next/image';
 
 const techConfig: Record<string, { color: string; icon: React.ReactNode }> = {
-    PHP: { color: "text-purple-700", icon: <SiPhp size={30} className="text-purple-700" /> },
-    Laravel: { color: "text-red-600", icon: <SiLaravel size={22} className="text-red-600" /> },
-    Symfony: { color: "text-gray-700", icon: <SiSymfony size={22} className="text-gray-700" /> },
-    Zend: { color: "text-gray-700", icon: <SiZend size={22} className="text-gray-700" /> },
-    Postgresql: { color: "text-blue-700", icon: <SiPostgresql size={25} className="text-blue-700" /> },
-    DynamoDB: { color: "text-orange-300", icon: <SiAmazondynamodb size={25} className="text-orange-300" /> },
-    Docker: { color: "text-blue-800", icon: <SiDocker size={25} className="text-blue-800" /> },
-    Kubernetes: { color: "text-indigo-700", icon: <SiKubernetes size={25} className="text-indigo-700" /> },
-    JavaScript: { color: "text-yellow-600", icon: <SiJavascript size={25} className="text-yellow-600" /> },
-    "Node.js": { color: "text-green-700", icon: <SiNodedotjs size={25} className="text-green-700" /> },
-    AngularJS: { color: "text-red-700", icon: <SiAngular size={25} className="text-red-700" /> },
-    Java: { color: "text-orange-700", icon: <SiSpring size={25} className="text-orange-700" /> },
-    "Spring Boot": { color: "text-green-800", icon: <SiSpring size={25} className="text-green-800" /> },
-    HTML: { color: "text-orange-600", icon: <SiHtml5 size={25} className="text-orange-600" /> },
-    CSS: { color: "text-blue-600", icon: <SiCss3 size={25} className="text-blue-600" /> }
+    PHP: {
+        color: "text-[#8892BF]", // PHP purple
+        icon: <SiPhp size={30}/>,
+    },
+    Laravel: {
+        color: "text-[#FF2D20]", // Laravel red
+        icon: <SiLaravel size={22}/>,
+    },
+    Symfony: {
+        color: "text-[#000000]", // Symfony black
+        icon: <SiSymfony size={22}/>,
+    },
+    Zend: {
+        color: "text-[#68B604]", // Zend green
+        icon: <SiZend size={22}/>,
+    },
+    Postgresql: {
+        color: "text-[#336791]", // PostgreSQL blue
+        icon: <SiPostgresql size={25}/>,
+    },
+    DynamoDB: {
+        color: "text-[#4053D6]", // AWS blue
+        icon: <SiAmazondynamodb size={25}/>,
+    },
+    Docker: {
+        color: "text-[#2496ED]", // Docker blue
+        icon: <SiDocker size={25}/>,
+    },
+    Kubernetes: {
+        color: "text-[#326CE5]", // Kubernetes blue
+        icon: <SiKubernetes size={25}/>,
+    },
+    JavaScript: {
+        color: "text-[#F7DF1E]", // JS yellow
+        icon: <SiJavascript size={25}/>,
+    },
+    NodeJs: {
+        color: "text-[#339933]", // Node.js green
+        icon: <SiNodedotjs size={25}/>,
+    },
+    AngularJS: {
+        color: "text-[#DD0031]", // Angular red
+        icon: <SiAngular size={25}/>,
+    },
+    Java: {
+        color: "text-[#007396]", // Java blue
+        icon: <SiSpring size={25}/>,
+    },
+    Spring: {
+        color: "text-[#6DB33F]", // Spring green
+        icon: <SiSpring size={25}/>,
+    },
+    HTML: {
+        color: "text-[#E34F26]", // HTML orange
+        icon: <SiHtml5 size={25}/>,
+    },
+    CSS: {
+        color: "text-[#1572B6]", // CSS blue
+        icon: <SiCss3 size={25}/>,
+    },
+    Tailwind: {
+        color: "text-[#38BDF8]", // Tailwind blue
+        icon: <SiTailwindcss size={25}/>,
+    },
+    NextJS: {
+        color: "text-black",
+        icon:
+            <Image
+                src="/svg/nextjs.svg"
+                alt="Next.js"
+                width={25}
+                height={25}
+            />
+    },
 };
 
-export function SkillBadge({ tech }: { tech: string }) {
+export function SkillBadge({tech}: { tech: string }) {
+    const [isHovered, setIsHovered] = useState(false);
     const config = techConfig[tech] || {
-        color: "text-neutral-600",
+        color: 'text-neutral-600',
         icon: null,
     };
+
     return (
-        <div className="relative group flex items-center justify-center p-2">
-            {config.icon}
-            <div className="absolute bottom-full mb-2 hidden group-hover:flex px-2 py-1 text-xs rounded bg-black text-white whitespace-nowrap">
-                {tech}
+        <div
+            className="relative flex items-center justify-center p-2 group"
+            onMouseEnter={() => setIsHovered(true)}
+            onMouseLeave={() => setIsHovered(false)}
+        >
+            <AnimatePresence>
+                {isHovered && (
+                    <motion.div
+                        initial={{opacity: 0, y: 8, scale: 0.9}}
+                        animate={{opacity: 1, y: 0, scale: 1}}
+                        exit={{opacity: 0, y: 8, scale: 0.9}}
+                        transition={{type: 'spring', stiffness: 300, damping: 20}}
+                        className="absolute bottom-full mb-2 px-2 py-1 rounded bg-black text-white text-xs whitespace-nowrap z-10 shadow-xl"
+                    >
+                        {tech}
+                    </motion.div>
+                )}
+            </AnimatePresence>
+
+            <div
+                className={`transition-transform duration-300 group-hover:scale-110 ${config.color}`}
+            >
+                {config.icon}
             </div>
         </div>
     );

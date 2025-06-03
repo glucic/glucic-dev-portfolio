@@ -20,8 +20,8 @@ export const metadata: Metadata = {
     icons: {
         icon: [
             {
-                url: "/icon.svg",
-                href: "/icon.svg",
+                url: "/svg/icon.svg",
+                href: "/svg/icon.svg",
             },
         ],
     },

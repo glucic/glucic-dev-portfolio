@@ -3,6 +3,7 @@
 import {Popover} from '@headlessui/react';
 import {useRouter, usePathname} from 'next/navigation';
 import Flag from 'react-world-flags';
+import {useEffect, useState} from 'react';
 
 const languages = [
     {code: 'en', label: 'English', flag: 'GB'},
@@ -12,8 +13,21 @@ const languages = [
 export default function LanguageSelector() {
     const router = useRouter();
     const pathname = usePathname();
+    const [isMobile, setIsMobile] = useState(false);
 
-    const currentLang = languages.find((lang) => pathname.startsWith(`/${lang.code}`)) || languages[0];
+    useEffect(() => {
+        const checkMobile = () => {
+            setIsMobile(window.innerWidth < 640); // sm breakpoint
+        };
+
+        checkMobile();
+        window.addEventListener('resize', checkMobile);
+        return () => window.removeEventListener('resize', checkMobile);
+    }, []);
+
+    const currentLang =
+        languages.find((lang) => pathname.startsWith(`/${lang.code}`)) ||
+        languages[0];
 
     const switchLanguage = (langCode: string) => {
         const newPath = pathname.replace(/^\/(en|de)/, `/${langCode}`);
@@ -27,8 +41,13 @@ export default function LanguageSelector() {
                 <Flag code={currentLang.flag} className="h-5 w-5"/>
                 <span>{currentLang.label}</span>
             </Popover.Button>
+
+            {/* Absolute on mobile to escape scroll area */}
             <Popover.Panel
-                className="absolute z-10 mt-2 w-40 bg-white dark:bg-neutral-800 rounded-md shadow-lg ring-1 ring-black ring-opacity-5">
+                className={`z-50 mt-2 w-40 rounded-md shadow-lg ring-1 ring-black ring-opacity-5
+          ${isMobile ? 'fixed left-4 bottom-20' : 'absolute'} 
+          bg-white dark:bg-neutral-800`}
+            >
                 <div className="py-1">
                     {languages.map((lang) => (
                         <button

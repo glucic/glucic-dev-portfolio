@@ -8,7 +8,6 @@ import {
     FooterSection,
     SkillsSection,
 } from '@/components/sections';
-import {NavigationBar} from "@/components/elements/NavigationBar";
 
 export async function generateStaticParams() {
     return [{lang: 'en'}, {lang: 'de'}];
@@ -24,7 +23,6 @@ export default async function Page({
 
     return (
         <div>
-            <NavigationBar/>
             <MainSection dict={dict}/>
             <AboutSection dict={dict}/>
             <SkillsSection dict={dict}/>
