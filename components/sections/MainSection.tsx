@@ -1,12 +1,10 @@
 "use client";
 
-import { motion } from "framer-motion";
-import Link from "next/link";
+import {motion} from "framer-motion";
 import React from "react";
-import { GithubIcon, InstagramIcon, LinkedinIcon } from "next-share";
-import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
-import { useIsMobile } from "@/lib/utils";
-import { NavigationBar } from "@/components/elements/NavigationBar";
+import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
+import {useIsMobile} from "@/lib/utils";
+import {NavigationBar} from "@/components/elements/NavigationBar";
 
 export interface MainSectionDict {
     main: {
@@ -22,34 +20,35 @@ export interface MainSectionDict {
     };
 }
 
-export function MainSection({ dict }: { dict: MainSectionDict }) {
+export function MainSection({dict}: { dict: MainSectionDict }) {
     const isMobile = useIsMobile();
 
     return (
         <section id="main">
-            <NavigationBar />
-            <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 sm:py-16 md:py-20 lg:py-24 text-center w-full max-w-4xl mx-auto">
+            <NavigationBar/>
+            <div
+                className="min-h-screen flex flex-col items-center justify-center px-6 py-12 sm:py-16 md:py-20 lg:py-24 text-center w-full max-w-4xl mx-auto">
                 <motion.h1
-                    initial={{ opacity: 0, y: 20 }}
-                    animate={{ opacity: 1, y: [20, -5, 0] }}
-                    transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
-                    className="roboto-bold text-4xl sm:text-5xl md:text-6xl lg:text-8xl dark:text-slate-800"
+                    initial={{opacity: 0, y: 20}}
+                    animate={{opacity: 1, y: [20, -5, 0]}}
+                    transition={{duration: 0.5, ease: [0.4, 0.0, 0.2, 1]}}
+                    className="roboto text-4xl sm:text-5xl md:text-6xl lg:text-8xl dark:text-slate-800 uppercase"
                 >
                     {dict.main.title}
                 </motion.h1>
 
-                {isMobile ? (
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: [20, -5, 0] }}
-                        transition={{ duration: 0.6, delay: 0.1 }}
-                        className="roboto-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4"
-                    >
-                        {dict.main.subtitle}
-                    </motion.p>
-                ) : (
+                    {isMobile ? (
+                        <motion.p
+                            initial={{opacity: 0, y: 20}}
+                            animate={{opacity: 1, y: [20, -5, 0]}}
+                            transition={{duration: 0.6, delay: 0.1}}
+                            className="roboto-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4"
+                        >
+                            {dict.main.subtitle}
+                        </motion.p>
+                    ) : (
                     <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4">
-                        <TypewriterEffectSmooth words={dict.main.typewriterSubtitle} />
+                        <TypewriterEffectSmooth words={dict.main.typewriterSubtitle}/>
                     </div>
                 )}
 
@@ -57,52 +56,33 @@ export function MainSection({ dict }: { dict: MainSectionDict }) {
                     {dict.main.location}
                 </p>
 
-                <div className="flex flex-row sm:flex-row justify-center items-center space-x-4 sm:space-y-0 sm:space-x-4 mt-6">
-                    <Link href="https://www.linkedin.com/in/gabriel-lucic/">
-                        <LinkedinIcon
-                            className="transition-transform duration-300 hover:-translate-y-1"
-                            size={32}
-                            round
-                        />
-                    </Link>
-                    <Link href="https://github.com/glucic">
-                        <GithubIcon
-                            className="transition-transform duration-300 hover:-translate-y-1"
-                            size={32}
-                            round
-                        />
-                    </Link>
-                    <Link href="https://www.instagram.com/gabriellucic_">
-                        <InstagramIcon
-                            className="transition-transform duration-300 hover:-translate-y-0.5"
-                            size={32}
-                            round
-                        />
-                    </Link>
-                </div>
-
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: [20, -5, 0] }}
                     transition={{ duration: 0.5 }}
                     className="mt-8 flex flex-wrap justify-center gap-4"
                 >
-                    <a
+                    <motion.a
                         href="/files/resume.pdf"
                         target="_blank"
                         rel="noopener noreferrer"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="rounded-xl bg-black px-6 py-2 font-semibold text-white shadow-md transition-colors duration-300 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200 uppercase"
                     >
-                        <button className="rounded-lg bg-black px-6 py-2 font-medium text-white transition duration-300 hover:bg-gray-800 dark:bg-white dark:text-black dark:hover:bg-gray-200">
-                            {dict.main.downloadCV}
-                        </button>
-                    </a>
+                        {dict.main.downloadCV}
+                    </motion.a>
 
-                    <a
+                    <motion.a
                         href="#contact"
-                        className="rounded-lg bg-white border border-black px-6 py-2 font-medium text-black transition duration-300 hover:bg-gray-100 dark:bg-black dark:text-white dark:border-white dark:hover:bg-gray-900"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.98 }}
+                        transition={{ type: "spring", stiffness: 300 }}
+                        className="rounded-xl border border-black bg-white px-6 py-2 font-semibold text-black shadow-md transition-colors duration-300 hover:bg-gray-100 dark:border-white dark:bg-black dark:text-white dark:hover:bg-gray-900 uppercase"
                     >
                         {dict.main.contactMe}
-                    </a>
+                    </motion.a>
                 </motion.div>
             </div>
         </section>

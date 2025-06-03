@@ -1,63 +1,67 @@
-// components/ContactSection.tsx
 "use client";
 
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import Link from "next/link";
 import React from "react";
-import {GithubIcon, LinkedinIcon, InstagramIcon} from "next-share";
+import { GithubIcon, LinkedinIcon, InstagramIcon, EmailIcon } from "next-share";
 
-export function ContactSection() {
+export interface ContactDict {
+    contact: {
+        headline: string;
+    };
+}
+
+export function ContactSection({dict}: { dict: ContactDict }) {
     return (
         <section
             id="contact"
-            className="min-h-screen relative flex flex-col items-center justify-center min-h-screen gap-6 bg-gray-700 px-6 py-16 text-center"
+            className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-700 px-4 sm:px-6 py-12 text-center"
         >
             <motion.div
-                initial={{opacity: 0, y: 20}}
-                animate={{opacity: 1, y: [20, -5, 0]}}
-                transition={{duration: 0.5}}
-                className="text-slate-100 dark:text-slate-800"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: [20, -5, 0] }}
+                transition={{ duration: 0.5 }}
+                className="text-slate-100"
             >
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold m-10">LET&apos;S GET IN TOUCH :)</h2>
+                <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 md:mb-12 uppercase">
+                    {dict.contact.headline}
+                </h2>
             </motion.div>
 
             <motion.div
-                initial={{opacity: 0, y: 20}}
-                animate={{opacity: 1, y: [20, -5, 0]}}
-                transition={{delay: 0.2}}
-                className="flex justify-center space-x-6"
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: [20, -5, 0] }}
+                transition={{ delay: 0.2 }}
+                className="flex flex-wrap justify-center gap-6"
             >
+                <Link href="mailto:gabriellucic@protonmail.com?subject=Portfolio%20Contact&body=Hi%20Gabriel%2C">
+                    <EmailIcon
+                        className="transition-transform duration-300 hover:scale-110"
+                        size={52}
+                        round
+                    />
+                </Link>
                 <Link href="https://www.linkedin.com/in/gabriel-lucic/">
                     <LinkedinIcon
                         className="transition-transform duration-300 hover:scale-110"
-                        size={40}
+                        size={52}
                         round
                     />
                 </Link>
                 <Link href="https://github.com/glucic">
                     <GithubIcon
                         className="transition-transform duration-300 hover:scale-110"
-                        size={40}
+                        size={52}
                         round
                     />
                 </Link>
                 <Link href="https://www.instagram.com/gabriellucic_">
-                    <InstagramIcon className="m-2 transition-all duration-300 hover:-translate-y-0.5" size={32} round/>
+                    <InstagramIcon
+                        className="transition-transform duration-300 hover:scale-110"
+                        size={52}
+                        round
+                    />
                 </Link>
-            </motion.div>
-
-            <motion.div
-                initial={{opacity: 0, y: 20}}
-                animate={{opacity: 1, y: [20, -5, 0]}}
-                transition={{delay: 0.4}}
-                className="z-10 mt-4"
-            >
-                <a
-                    href="mailto:gabriellucic@protonmail.com?subject=Portfolio%20Contact&body=Hi%20Gabriel%2C"
-                    className="rounded-lg bg-white px-6 py-3 font-semibold text-gray-800 transition-all hover:scale-105 hover:bg-gray-200 dark:bg-black dark:text-white dark:hover:bg-gray-800"
-                >
-                    Send a Message
-                </a>
             </motion.div>
         </section>
     );

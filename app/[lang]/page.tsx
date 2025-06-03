@@ -27,7 +27,7 @@ export default async function Page({
             <AboutSection dict={dict}/>
             <SkillsSection dict={dict}/>
             <ExperienceSection dict={dict}/>
-            <ContactSection/>
+            <ContactSection dict={dict}/>
             <FooterSection/>
         </div>
     );

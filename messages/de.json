@@ -1,13 +1,10 @@
 {
   "main": {
-    "title": "GABRIEL LUCIC",
-    "subtitle": "Software Engineer spezialisiert auf Webanwendungen.",
+    "title": "Gabriel Lucic",
+    "subtitle": "Softwareentwickler spezialisiert auf Webentwicklung.",
     "typewriterSubtitle": [
       {
-        "text": "Software"
-      },
-      {
-        "text": "Engineer"
+        "text": "Softwareentwickler"
       },
       {
         "text": "spezialisiert"
@@ -16,12 +13,12 @@
         "text": "auf"
       },
       {
-        "text": "Webanwendungen.",
+        "text": "Webentwicklung.",
         "className": "text-blue-500 dark:text-blue-500"
       }
     ],
     "location": "Basierend in München, Deutschland",
-    "downloadCV": "Lebenslauf herunterladen",
+    "downloadCV": "Lebenslauf ansehen",
     "contactMe": "Kontaktieren Sie mich"
   },
   "about": {
@@ -39,13 +36,26 @@
         "title": "Backend-Entwicklung",
         "description": "Stabile APIs mit Laravel, Spring Boot & PostgreSQL.",
         "icon": "backend.svg",
-        "tech": ["Laravel", "Spring", "Postgresql"]
+        "tech": [
+          "PHP",
+          "Laravel",
+          "Spring",
+          "Postgresql",
+          "Docker"
+        ]
       },
       {
         "title": "Webentwicklung",
         "description": "Moderne Frontends mit AngularJS, Next.js & Tailwind.",
         "icon": "frontend.svg",
-        "tech": ["AngularJS", "Tailwind", "NextJS"]
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "NextJS",
+          "AngularJS",
+          "Tailwind"
+        ]
       },
       {
         "title": "Softwarearchitektur",
@@ -60,12 +70,13 @@
     ]
   },
   "experience": {
-    "title": "Erfahrung",
+    "headline": "Berufserfahrung",
+    "subtext": "Meine bisherigen Rollen und Tech-Stacks.",
     "entries": {
       "intermediate": {
         "date": "04.2025 - Heute",
         "duration": "Aktuell",
-        "role": "Intermediate Softwareentwickler",
+        "role": "Mid Level Softwareentwickler",
         "company": "compleet GmbH",
         "link": "https://www.compleet.com",
         "location": "München, Deutschland",
@@ -79,7 +90,7 @@
           "Docker",
           "Kubernetes"
         ],
-        "description": "Verantwortlich für ein Symfony-basiertes Projekt und gleichzeitig Betreuung eines laufenden Laravel-Dienstes. Neue Funktionen entwickelt und bestehende Systeme refaktoriert sowie stabilisiert. Tägliche Arbeit mit PHP (Symfony, Laravel) und containerisierten Umgebungen (Docker, Kubernetes), enge Zusammenarbeit mit Produkt- und QA-Teams. Diese Rolle vertiefte mein Verständnis für Servicearchitektur und produktionsreife Entwicklung."
+        "description": "Verantwortlich für ein Symfony-basiertes Projekt und gleichzeitig Betreuung eines laufenden Laravel-Dienstes. Neue Funktionen entwickelt und bestehende Systeme refaktoriert sowie stabilisiert. Tägliche Arbeit mit PHP (Symfony, Laravel) im containerisierten Umgebungen (Docker, Kubernetes), enge Zusammenarbeit mit Produkt- und QA-Teams. Diese Rolle vertiefte mein Verständnis für Servicearchitektur und produktionsreife Entwicklung."
       },
       "associate": {
         "date": "03.2023 - 04.2025",
@@ -105,7 +116,7 @@
       "developer": {
         "date": "07.2021 - 03.2023",
         "duration": "2 Jahre",
-        "role": "Softwareentwickler",
+        "role": "Junior Softwareentwickler",
         "company": "compleet GmbH",
         "link": "www.compleet.com",
         "location": "München, Deutschland",
@@ -122,7 +133,7 @@
       "intern": {
         "date": "08.2018 - 07.2021",
         "duration": "3 Jahre",
-        "role": "Praktikum",
+        "role": "Ausbildung",
         "company": "compleet GmbH (ehemals GermanPersonnel e-search GmbH)",
         "link": "www.compleet.com",
         "location": "München, Deutschland",
@@ -134,8 +145,11 @@
           "AngularJS",
           "Postgresql"
         ],
-        "description": "Praktikum während des Studiums – Entwicklung einer Full-Stack-Anwendung mit PHP, AngularJS und PostgreSQL. Praktische Erfahrung in der End-to-End-Entwicklung und in agilen Teams gesammelt. Eigeninitiative gezeigt, gut im Team zusammengearbeitet und technische sowie kommunikative Fähigkeiten verbessert."
+        "description": "Entwicklung einer Full-Stack-Anwendung mit PHP, AngularJS und PostgreSQL. Praktische Erfahrung in der End-to-End-Entwicklung und in agilen Teams gesammelt. Eigeninitiative gezeigt, gut im Team zusammengearbeitet und technische sowie kommunikative Fähigkeiten verbessert."
       }
     }
+  },
+  "contact": {
+    "headline": "Lass uns austauschen! :)"
   }
 }

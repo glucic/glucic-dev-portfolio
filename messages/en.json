@@ -1,13 +1,13 @@
 {
   "main": {
-    "title": "GABRIEL LUCIC",
-    "subtitle": "Software Engineer Specializing in Web Applications.",
+    "title": "Gabriel Lucic",
+    "subtitle": "Software Developer Specializing in Web Applications.",
     "typewriterSubtitle": [
       {
         "text": "Software"
       },
       {
-        "text": "Engineer"
+        "text": "Developer"
       },
       {
         "text": "Specializing"
@@ -25,7 +25,7 @@
       }
     ],
     "location": "Based in Munich, Germany",
-    "downloadCV": "Download my CV",
+    "downloadCV": "View Resume",
     "contactMe": "Contact Me"
   },
   "about": {
@@ -41,15 +41,28 @@
     "skills": [
       {
         "title": "Backend Development",
-        "description": "Robust APIs with Laravel, Spring Boot & PostgreSQL.",
+        "description": "Robust APIs with PHP, Laravel, Spring Boot, PostgreSQL and more...",
         "icon": "backend.svg",
-        "tech": ["Laravel", "Spring", "Postgresql"]
+        "tech": [
+          "PHP",
+          "Laravel",
+          "Spring",
+          "Postgresql",
+          "Docker"
+        ]
       },
       {
         "title": "Web Development",
         "description": "Modern frontend with AngularJS, Next.js & Tailwind.",
         "icon": "frontend.svg",
-        "tech": ["AngularJS", "Tailwind", "NextJS"]
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "NextJS",
+          "AngularJS",
+          "Tailwind"
+        ]
       },
       {
         "title": "Software Architecture",
@@ -64,12 +77,13 @@
     ]
   },
   "experience": {
-    "title": "Experience",
+    "headline": "Work Experience",
+    "subtext": "A look at my previous roles and the technologies I've worked with.",
     "entries": {
       "intermediate": {
         "date": "04.2025 - Present",
         "duration": "Ongoing",
-        "role": "Intermediate Software Developer",
+        "role": "Mid Level Software Developer",
         "company": "compleet GmbH",
         "link": "https://www.compleet.com",
         "location": "Munich, Germany",
@@ -83,7 +97,7 @@
           "Docker",
           "Kubernetes"
         ],
-        "description": "Took ownership of a Symfony-based project while also maintaining a live Laravel-based service. Balanced development of new features with critical refactoring and stability improvements. Worked daily with PHP (Symfony, Laravel), containerized environments (Docker, Kubernetes), and collaborated closely with product and QA teams. This role deepened my understanding of service architecture and production-ready development."
+        "description": "Took ownership of a Symfony-based project while also maintaining a live Laravel-based service. Balanced development of new features with critical refactoring and stability improvements. Worked daily with PHP (Symfony, Laravel) in containerized environments (Docker, Kubernetes), and collaborated closely with product and QA teams. This role deepened my understanding of service architecture and production-ready development."
       },
       "associate": {
         "date": "03.2023 - 04.2025",
@@ -109,7 +123,7 @@
       "developer": {
         "date": "07.2021 - 03.2023",
         "duration": "2 Years",
-        "role": "Software Developer",
+        "role": "Junior Software Developer",
         "company": "compleet GmbH",
         "link": "https://www.compleet.com",
         "location": "Munich, Germany",
@@ -126,7 +140,7 @@
       "intern": {
         "date": "08.2018 - 07.2021",
         "duration": "3 Years",
-        "role": "Internship",
+        "role": "Apprenticeship & Studying",
         "company": "compleet GmbH (formerly GermanPersonnel e-search GmbH)",
         "link": "https://www.compleet.com",
         "location": "Munich, Germany",
@@ -141,5 +155,8 @@
         "description": "Worked as an intern (while studying), building a full-stack application with PHP, AngularJS, and PostgreSQL. Gained hands-on experience in end-to-end development and Agile workflows. Took initiative, collaborated with teams, and improved technical and communication skills."
       }
     }
+  },
+  "contact": {
+    "headline": "Let's get in touch! :)"
   }
 }

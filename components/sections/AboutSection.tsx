@@ -16,9 +16,8 @@ export function AboutSection({dict}: { dict: AboutSectionDict }) {
     return (
         <section
             id="about"
-            className="flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 sm:py-16 md:py-20 lg:py-24 max-w-4xl mx-auto"
+            className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 sm:py-16 md:py-20 lg:py-24 max-w-4xl mx-auto"
         >
-            {/* Text Section */}
             <div className="flex-1 text-center md:text-left">
                 <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2">
                     {dict.about.name}
@@ -33,7 +32,6 @@ export function AboutSection({dict}: { dict: AboutSectionDict }) {
                 </div>
             </div>
 
-            {/* Image Section */}
             <div className="w-full md:max-w-xs mb-8 md:mb-0">
                 <Image
                     className="rounded-lg object-cover"

@@ -10,7 +10,8 @@ interface ExperienceSectionProps {
 
 export interface ExperienceDict {
     experience: {
-        title: string;
+        headline: string;
+        subtext?: string;
         entries: {
             [key: string]: {
                 date: string;
@@ -61,12 +62,15 @@ export function ExperienceSection({dict}: ExperienceSectionProps) {
     return (
         <section
             id="experience"
-            className="w-full px-6 py-12 sm:py-16 md:py-20 lg:py-24 max-w-6xl mx-auto"
+            className="min-h-screen w-full px-6 py-12 sm:py-16 md:py-20 lg:py-24 max-w-6xl mx-auto"
         >
-            <div className="mb-10 sm:mb-14 text-center">
-                <h2 className="roboto-bold leading-tight tracking-tight text-3xl sm:text-4xl md:text-5xl">
-                    {dict.experience.title}
+            <div className="mb-8 md:mb-12 md:mx-auto text-center max-w-3xl">
+                <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl">
+                    {dict.experience.headline}
                 </h2>
+                <p className="roboto-thin mt-4 text-xl text-gray-600 dark:text-gray-400">
+                    {dict.experience.subtext}
+                </p>
             </div>
             <Timeline data={experienceData}/>
         </section>
