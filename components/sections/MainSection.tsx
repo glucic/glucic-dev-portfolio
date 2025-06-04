@@ -1,10 +1,10 @@
 "use client";
 
-import {motion} from "framer-motion";
+import { motion } from "framer-motion";
 import React from "react";
-import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
-import {useIsMobile} from "@/lib/utils";
-import {NavigationBar} from "@/components/elements/NavigationBar";
+import { TypewriterEffectSmooth } from "@/components/ui/typewriter-effect";
+import { useIsMobile } from "@/lib/utils";
+import { NavigationBar } from "@/components/elements/NavigationBar";
 
 export interface MainSectionDict {
     main: {
@@ -20,48 +20,53 @@ export interface MainSectionDict {
     };
 }
 
-export function MainSection({dict}: { dict: MainSectionDict }) {
+export function MainSection({ dict }: { dict: MainSectionDict }) {
     const isMobile = useIsMobile();
 
     return (
-        <section id="main">
-            <NavigationBar/>
-            <div
-                className="min-h-screen flex flex-col items-center justify-center px-6 py-12 sm:py-16 md:py-20 lg:py-24 text-center w-full max-w-4xl mx-auto">
+        <section id="main" className="bg-white dark:bg-gray-900 transition-colors duration-300">
+            <NavigationBar />
+            <div className="min-h-screen flex flex-col items-center justify-center px-6 py-12 sm:py-16 md:py-20 lg:py-24 text-center w-full max-w-4xl mx-auto">
+
+                {/* Title */}
                 <motion.h1
-                    initial={{opacity: 0, y: 20}}
-                    animate={{opacity: 1, y: [20, -5, 0]}}
-                    transition={{duration: 0.5, ease: [0.4, 0.0, 0.2, 1]}}
-                    className="roboto text-4xl sm:text-5xl md:text-6xl lg:text-8xl dark:text-slate-800 uppercase"
+                    initial={{ opacity: 0, y: 20 }}
+                    animate={{ opacity: 1, y: [20, -5, 0] }}
+                    transition={{ duration: 0.5, ease: [0.4, 0.0, 0.2, 1] }}
+                    className="roboto text-4xl sm:text-5xl md:text-6xl lg:text-8xl text-black dark:text-white uppercase"
                 >
                     {dict.main.title}
                 </motion.h1>
 
-                    {isMobile ? (
-                        <motion.p
-                            initial={{opacity: 0, y: 20}}
-                            animate={{opacity: 1, y: [20, -5, 0]}}
-                            transition={{duration: 0.6, delay: 0.1}}
-                            className="roboto-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4"
-                        >
-                            {dict.main.subtitle}
-                        </motion.p>
-                    ) : (
-                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4">
-                        <TypewriterEffectSmooth words={dict.main.typewriterSubtitle}/>
+                {/* Subtitle */}
+                {isMobile ? (
+                    <motion.p
+                        initial={{ opacity: 0, y: 20 }}
+                        animate={{ opacity: 1, y: [20, -5, 0] }}
+                        transition={{ duration: 0.6, delay: 0.1 }}
+                        className="roboto-thin text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 text-gray-800 dark:text-gray-200"
+                    >
+                        {dict.main.subtitle}
+                    </motion.p>
+                ) : (
+                    <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl mt-4 text-gray-800 dark:text-gray-200">
+                        <TypewriterEffectSmooth words={dict.main.typewriterSubtitle} />
                     </div>
                 )}
 
-                <p className="roboto-thin text-lg sm:text-xl text-gray-600 mt-4">
+                {/* Location */}
+                <p className="roboto-thin text-lg sm:text-xl text-gray-600 dark:text-gray-400 mt-4">
                     {dict.main.location}
                 </p>
 
+                {/* Buttons */}
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: [20, -5, 0] }}
                     transition={{ duration: 0.5 }}
                     className="mt-8 flex flex-wrap justify-center gap-4"
                 >
+                    {/* CV Download */}
                     <motion.a
                         href="/files/resume.pdf"
                         target="_blank"
@@ -74,6 +79,7 @@ export function MainSection({dict}: { dict: MainSectionDict }) {
                         {dict.main.downloadCV}
                     </motion.a>
 
+                    {/* Contact Link */}
                     <motion.a
                         href="#contact"
                         whileHover={{ scale: 1.05 }}

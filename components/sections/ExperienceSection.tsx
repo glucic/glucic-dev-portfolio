@@ -1,8 +1,8 @@
 "use client";
 
-import {Timeline} from "@/components/ui/timeline";
-import {SkillBadge} from "@/components/elements/SkillBadges";
-import {MapPin} from "lucide-react";
+import { Timeline } from "@/components/ui/timeline";
+import { SkillBadge } from "@/components/elements/SkillBadges";
+import { MapPin } from "lucide-react";
 
 interface ExperienceSectionProps {
     dict: ExperienceDict;
@@ -27,34 +27,38 @@ export interface ExperienceDict {
     };
 }
 
-export function ExperienceSection({dict}: ExperienceSectionProps) {
+export function ExperienceSection({ dict }: ExperienceSectionProps) {
     const entries = Object.values(dict.experience.entries);
 
     const experienceData = entries.map((entry) => ({
         title: (
-            <div className="text-lg sm:text-xl md:text-2xl">
+            <div className="text-lg sm:text-xl md:text-2xl text-foreground">
                 <p>{entry.date}</p>
-                <p className="text-base sm:text-lg text-gray-500">{entry.duration}</p>
+                <p className="text-base sm:text-lg text-muted">{entry.duration}</p>
             </div>
         ),
         content: (
-            <div className="text-base sm:text-lg md:text-xl">
+            <div className="text-base sm:text-lg md:text-xl text-foreground">
                 <div className="flex items-center gap-2 mb-1 text-xl sm:text-2xl font-semibold">
                     <span>{entry.role}</span>
                 </div>
-                <p className="text-base text-gray-600 mb-2 underline hover:text-blue-600">
-                    <a href={entry.link}> {entry.company} </a>
+                <p className="text-base underline hover:text-blue-600 transition-colors">
+                    <a href={entry.link} target="_blank" rel="noopener noreferrer">
+                        {entry.company}
+                    </a>
                 </p>
-                <p className="text-sm text-gray-500 flex items-center gap-1 mb-2">
-                    <MapPin size={16} className="text-gray-500"/>
+                <p className="text-sm flex items-center gap-1 mb-2 text-muted">
+                    <MapPin size={16} />
                     {entry.location}
                 </p>
                 <div className="flex flex-wrap justify-center md:justify-start gap-2 py-4">
                     {entry.tech.map((techItem, i) => (
-                        <SkillBadge key={i} tech={techItem}/>
+                        <SkillBadge key={i} tech={techItem} />
                     ))}
                 </div>
-                <p className="text-sm sm:text-base text-gray-800">{entry.description}</p>
+                <p className="text-sm sm:text-base text-muted-foreground">
+                    {entry.description}
+                </p>
             </div>
         ),
     }));
@@ -62,17 +66,19 @@ export function ExperienceSection({dict}: ExperienceSectionProps) {
     return (
         <section
             id="experience"
-            className="min-h-screen w-full px-6 py-12 sm:py-16 md:py-20 lg:py-24 max-w-6xl mx-auto"
+            className="w-full min-h-screen px-6 py-12 sm:py-16 md:py-20 lg:py-24 dark:bg-gray-900"
         >
-            <div className="mb-8 md:mb-12 md:mx-auto text-center max-w-3xl">
-                <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl">
-                    {dict.experience.headline}
-                </h2>
-                <p className="roboto-thin mt-4 text-xl text-gray-600 dark:text-gray-400">
-                    {dict.experience.subtext}
-                </p>
+            <div className="max-w-6xl mx-auto">
+                <div className="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
+                    <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl text-foreground">
+                        {dict.experience.headline}
+                    </h2>
+                    <p className="roboto-thin mt-4 text-xl text-muted-foreground">
+                        {dict.experience.subtext}
+                    </p>
+                </div>
+                <Timeline data={experienceData} />
             </div>
-            <Timeline data={experienceData}/>
         </section>
     );
 }

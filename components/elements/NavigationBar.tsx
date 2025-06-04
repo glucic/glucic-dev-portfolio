@@ -12,6 +12,7 @@ import {
 } from '@/components/ui/resizable-navbar';
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/elements/LanguageSwitcher';
+import {ThemeToggle} from "@/components/elements/ThemeToggle";
 
 export const navItems = [
     {
@@ -36,7 +37,7 @@ export function NavigationBar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className="relative w-full px-3 py-4 sm:py-6 md:py-10">
+        <div className="relative w-full px-3 py-4 sm:py-6 md:py-10 bg-white dark:bg-gray-900 transition-colors">
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody>
@@ -44,7 +45,10 @@ export function NavigationBar() {
                     <div className="flex items-center gap-4">
                         <NavItems items={navItems} />
                     </div>
-                    <LanguageSwitcher />
+                    <div className="flex flex-row gap-5">
+                        <ThemeToggle />
+                        <LanguageSwitcher />
+                    </div>
                 </NavBody>
 
                 {/* Mobile Navigation */}
@@ -60,7 +64,7 @@ export function NavigationBar() {
                     <MobileNavMenu
                         isOpen={isMobileMenuOpen}
                         onClose={() => setIsMobileMenuOpen(false)}
-                        className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6"
+                        className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6 bg-white dark:bg-neutral-950 rounded-lg transition-colors"
                     >
                         {navItems.map((item, idx) => (
                             <a
@@ -72,8 +76,9 @@ export function NavigationBar() {
                                 {item.name}
                             </a>
                         ))}
-                        <div className="mt-4">
+                        <div className="flex flex-row mt-4 gap-5">
                             <LanguageSwitcher />
+                            <ThemeToggle />
                         </div>
                     </MobileNavMenu>
                 </MobileNav>

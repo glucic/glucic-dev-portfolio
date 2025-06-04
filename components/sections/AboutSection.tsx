@@ -12,35 +12,37 @@ export interface AboutSectionDict {
     };
 }
 
-export function AboutSection({dict}: { dict: AboutSectionDict }) {
+export function AboutSection({ dict }: { dict: AboutSectionDict }) {
     return (
         <section
             id="about"
-            className="min-h-screen flex flex-col-reverse md:flex-row items-center justify-center gap-10 px-6 py-12 sm:py-16 md:py-20 lg:py-24 max-w-4xl mx-auto"
+            className="w-full bg-white dark:bg-gray-900 transition-colors duration-300 px-6 py-12 sm:py-16 md:py-20 lg:py-24"
         >
-            <div className="flex-1 text-center md:text-left">
-                <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2">
-                    {dict.about.name}
-                </h2>
-                <p className="roboto-thin text-lg sm:text-xl text-gray-700 mb-4">
-                    {dict.about.role}
-                </p>
-                <div className="text-sm sm:text-base leading-relaxed text-gray-800 space-y-4">
-                    <p>{dict.about.intro}</p>
-                    <p>{dict.about.experience}</p>
-                    <p>{dict.about.goals}</p>
+            <div className="min-h-screen max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-15">
+                <div className="flex-1 text-center md:text-left">
+                    <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2 text-black dark:text-white">
+                        {dict.about.name}
+                    </h2>
+                    <p className="roboto-thin text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                        {dict.about.role}
+                    </p>
+                    <div className="text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-4">
+                        <p>{dict.about.intro}</p>
+                        <p>{dict.about.experience}</p>
+                        <p>{dict.about.goals}</p>
+                    </div>
                 </div>
-            </div>
 
-            <div className="w-full md:max-w-xs mb-8 md:mb-0">
-                <Image
-                    className="rounded-lg object-cover"
-                    src="/images/ec0591e7-2256-4b46-bd4c-a259b0fafabe.png"
-                    alt="about-me"
-                    width={500}
-                    height={700}
-                    layout="responsive"
-                />
+                <div className="w-full md:max-w-xs mb-8 md:mb-0">
+                    <Image
+                        className="rounded-lg object-cover"
+                        src="/images/ec0591e7-2256-4b46-bd4c-a259b0fafabe.png"
+                        alt="about-me"
+                        width={500}
+                        height={700}
+                        layout="responsive"
+                    />
+                </div>
             </div>
         </section>
     );

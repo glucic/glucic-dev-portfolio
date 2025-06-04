@@ -8,6 +8,7 @@ import {
     FooterSection,
     SkillsSection,
 } from '@/components/sections';
+import { ThemeProvider } from 'next-themes';
 
 export async function generateStaticParams() {
     return [{lang: 'en'}, {lang: 'de'}];
@@ -23,12 +24,14 @@ export default async function Page({
 
     return (
         <div>
-            <MainSection dict={dict}/>
-            <AboutSection dict={dict}/>
-            <SkillsSection dict={dict}/>
-            <ExperienceSection dict={dict}/>
-            <ContactSection dict={dict}/>
-            <FooterSection/>
+            <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+                <MainSection dict={dict}/>
+                <AboutSection dict={dict}/>
+                <SkillsSection dict={dict}/>
+                <ExperienceSection dict={dict}/>
+                <ContactSection dict={dict}/>
+                <FooterSection/>
+            </ThemeProvider>
         </div>
     );
 }
