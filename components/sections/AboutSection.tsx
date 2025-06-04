@@ -16,17 +16,17 @@ export function AboutSection({ dict }: { dict: AboutSectionDict }) {
     return (
         <section
             id="about"
-            className="w-full bg-white dark:bg-gray-900 transition-colors duration-300 px-6 py-12 sm:py-16 md:py-20 lg:py-24"
+            className="w-full bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300 px-6 py-12 sm:py-16 md:py-20 lg:py-24"
         >
             <div className="min-h-screen max-w-4xl mx-auto flex flex-col-reverse md:flex-row items-center justify-center gap-15">
                 <div className="flex-1 text-center md:text-left">
-                    <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2 text-black dark:text-white">
+                    <h2 className="roboto-bold text-3xl sm:text-4xl md:text-5xl mb-2 text-[var(--foreground)]">
                         {dict.about.name}
                     </h2>
-                    <p className="roboto-thin text-lg sm:text-xl text-gray-700 dark:text-gray-300 mb-4">
+                    <p className="roboto-thin text-lg sm:text-xl text-[var(--muted-foreground)] mb-4">
                         {dict.about.role}
                     </p>
-                    <div className="text-sm sm:text-base leading-relaxed text-gray-800 dark:text-gray-200 space-y-4">
+                    <div className="text-sm sm:text-base leading-relaxed text-[var(--muted-foreground)] space-y-4">
                         <p>{dict.about.intro}</p>
                         <p>{dict.about.experience}</p>
                         <p>{dict.about.goals}</p>

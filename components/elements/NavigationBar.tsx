@@ -12,7 +12,7 @@ import {
 } from '@/components/ui/resizable-navbar';
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/elements/LanguageSwitcher';
-import {ThemeToggle} from "@/components/elements/ThemeToggle";
+import { ThemeToggle } from "@/components/elements/ThemeToggle";
 
 export const navItems = [
     {
@@ -37,7 +37,7 @@ export function NavigationBar() {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
-        <div className="relative w-full px-3 py-4 sm:py-6 md:py-10 bg-white dark:bg-gray-900 transition-colors">
+        <div className="relative w-full px-3 py-4 sm:py-6 md:py-10 bg-[var(--background)] text-[var(--foreground)] transition-colors">
             <Navbar>
                 {/* Desktop Navigation */}
                 <NavBody>
@@ -64,14 +64,14 @@ export function NavigationBar() {
                     <MobileNavMenu
                         isOpen={isMobileMenuOpen}
                         onClose={() => setIsMobileMenuOpen(false)}
-                        className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6 bg-white dark:bg-neutral-950 rounded-lg transition-colors"
+                        className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6 bg-[var(--background)] text-[var(--foreground)] rounded-lg transition-colors"
                     >
                         {navItems.map((item, idx) => (
                             <a
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
-                                className="block text-base text-neutral-700 dark:text-neutral-300 py-2 transition-colors hover:text-black dark:hover:text-white"
+                                className="block text-base text-[var(--muted-foreground)] py-2 transition-colors hover:text-[var(--foreground)]"
                             >
                                 {item.name}
                             </a>

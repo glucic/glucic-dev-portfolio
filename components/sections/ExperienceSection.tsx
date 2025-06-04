@@ -32,13 +32,13 @@ export function ExperienceSection({ dict }: ExperienceSectionProps) {
 
     const experienceData = entries.map((entry) => ({
         title: (
-            <div className="text-lg sm:text-xl md:text-2xl text-foreground">
+            <div className="text-lg sm:text-xl md:text-2xl text-[var(--foreground)]">
                 <p>{entry.date}</p>
-                <p className="text-base sm:text-lg text-muted">{entry.duration}</p>
+                <p className="text-base sm:text-lg text-[var(--muted-foreground)]">{entry.duration}</p>
             </div>
         ),
         content: (
-            <div className="text-base sm:text-lg md:text-xl text-foreground">
+            <div className="text-base sm:text-lg md:text-xl text-[var(--foreground)]">
                 <div className="flex items-center gap-2 mb-1 text-xl sm:text-2xl font-semibold">
                     <span>{entry.role}</span>
                 </div>
@@ -47,7 +47,7 @@ export function ExperienceSection({ dict }: ExperienceSectionProps) {
                         {entry.company}
                     </a>
                 </p>
-                <p className="text-sm flex items-center gap-1 mb-2 text-muted">
+                <p className="text-sm flex items-center gap-1 mt-2 text-[var(--muted-foreground)]">
                     <MapPin size={16} />
                     {entry.location}
                 </p>
@@ -56,7 +56,7 @@ export function ExperienceSection({ dict }: ExperienceSectionProps) {
                         <SkillBadge key={i} tech={techItem} />
                     ))}
                 </div>
-                <p className="text-sm sm:text-base text-muted-foreground">
+                <p className="text-sm sm:text-base text-[var(--muted-foreground)]">
                     {entry.description}
                 </p>
             </div>
@@ -66,14 +66,14 @@ export function ExperienceSection({ dict }: ExperienceSectionProps) {
     return (
         <section
             id="experience"
-            className="w-full min-h-screen px-6 py-12 sm:py-16 md:py-20 lg:py-24 dark:bg-gray-900"
+            className="w-full min-h-screen px-6 py-12 sm:py-16 md:py-20 lg:py-24 bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300"
         >
             <div className="max-w-6xl mx-auto">
                 <div className="mb-8 md:mb-12 text-center max-w-3xl mx-auto">
-                    <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl text-foreground">
+                    <h2 className="roboto-bold leading-tighter tracking-tighter md:text-4xl text-3xl text-[var(--foreground)]">
                         {dict.experience.headline}
                     </h2>
-                    <p className="roboto-thin mt-4 text-xl text-muted-foreground">
+                    <p className="roboto-thin mt-4 text-xl text-[var(--muted-foreground)]">
                         {dict.experience.subtext}
                     </p>
                 </div>
