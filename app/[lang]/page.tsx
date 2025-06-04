@@ -8,16 +8,16 @@ import {
     FooterSection,
     SkillsSection,
 } from '@/components/sections';
-import { ThemeProvider } from 'next-themes';
+import {ThemeProvider} from 'next-themes';
 
 export async function generateStaticParams() {
-    return [{lang: 'en'}, {lang: 'de'}];
+    return [{lang: 'en'}, {lang: 'de'}, {lang: 'hr'}];
 }
 
 export default async function Page({
                                        params,
                                    }: {
-    params: Promise<{ lang: 'en' | 'de' }>;
+    params: Promise<{ lang: 'en' | 'de' | 'hr' }>;
 }) {
     const {lang} = await params;
     const dict = await getDictionary(lang);

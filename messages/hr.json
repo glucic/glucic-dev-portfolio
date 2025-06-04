@@ -1,0 +1,162 @@
+{
+  "main": {
+    "title": "Gabriel Lucic",
+    "subtitle": "Software Engineer specijaliziran za web aplikacije.",
+    "typewriterSubtitle": [
+      {
+        "text": "Software"
+      },
+      {
+        "text": "Engineer"
+      },
+      {
+        "text": "specijaliziran"
+      },
+      {
+        "text": "za"
+      },
+      {
+        "text": "web",
+        "className": "text-blue-500 dark:text-blue-500"
+      },
+      {
+        "text": "aplikacije.",
+        "className": "text-blue-500 dark:text-blue-500"
+      }
+    ],
+    "location": "Sa sjedištem u Münchenu, Njemačka",
+    "downloadCV": "Pogledaj životopis",
+    "contactMe": "Kontaktiraj me"
+  },
+  "about": {
+    "name": "Gabriel Lucic",
+    "role": "Full Stack Software Engineer",
+    "intro": "Pozdrav, ja sam Gabriel Lucic – Software Engineer iz Münchena, Njemačka. Posljednjih 7+ godina gradim i održavam backend sustave, uglavnom koristeći PHP i Laravel, s fokusom na čist kod, skalabilnost i dugoročnu održivost.",
+    "experience": "Uživam raditi u agilnim, multidisciplinarnim timovima i imam iskustva s alatima poput PostgreSQL-a, Dockera, Kubernetes-a, ali i s Javom, Spring Boot-om i AngularJS-om.",
+    "goals": "Tečno govorim engleski, njemački i hrvatski, i uvijek težim daljnjem profesionalnom razvoju. Moj dugoročni cilj je preuzeti više arhitektonskih odgovornosti i sudjelovati u oblikovanju pouzdanih, održivih sustava."
+  },
+  "skills": {
+    "headline": "Moja područja stručnosti",
+    "subtext": "Moje usluge su pažljivo prilagođene vašim specifičnim poslovnim ciljevima i potrebama.",
+    "skills": [
+      {
+        "title": "Razvoj pozadinskih sustava",
+        "description": "Pouzdani API-jevi s PHP-om, Laravelom, Spring Boot-om, PostgreSQL-om i više...",
+        "icon": "backend.svg",
+        "tech": [
+          "PHP",
+          "Laravel",
+          "Spring",
+          "Postgresql",
+          "Docker"
+        ]
+      },
+      {
+        "title": "Razvoj web sučelja",
+        "description": "Moderan frontend s AngularJS-om, Next.js-om i Tailwind-om.",
+        "icon": "frontend.svg",
+        "tech": [
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "NextJS",
+          "AngularJS",
+          "Tailwind"
+        ]
+      },
+      {
+        "title": "Softverska arhitektura",
+        "description": "Iskustvo u dizajnu skalabilnih sustava.",
+        "icon": "architecture.svg"
+      },
+      {
+        "title": "Timski rad",
+        "description": "Snažna komunikacija u agilnim timovima.",
+        "icon": "teamwork.svg"
+      }
+    ]
+  },
+  "experience": {
+    "headline": "Radno iskustvo",
+    "subtext": "Pogled na moje prethodne uloge i tehnologije s kojima sam radio.",
+    "entries": {
+      "intermediate": {
+        "date": "04.2025 - danas",
+        "duration": "Trenutno",
+        "role": "Software Engineer srednjeg nivoa",
+        "company": "compleet GmbH",
+        "link": "https://www.compleet.com",
+        "location": "München, Njemačka",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Laravel",
+          "Symfony",
+          "Postgresql",
+          "Docker",
+          "Kubernetes"
+        ],
+        "description": "Preuzeo sam odgovornost za Symfony projekt i paralelno održavao aktivnu Laravel uslugu. Kombinirao sam razvoj novih funkcionalnosti s kritičnim refaktoringom i poboljšanjima stabilnosti. Radio sam svakodnevno s PHP-om (Symfony, Laravel) u kontejneriziranim okruženjima (Docker, Kubernetes), i blisko surađivao s proizvodnim i QA timovima. Ova uloga mi je dodatno produbila razumijevanje arhitekture servisa i razvoja spremnog za produkciju."
+      },
+      "associate": {
+        "date": "03.2023 - 04.2025",
+        "duration": "2 godine",
+        "role": "Associate Software Engineer",
+        "company": "compleet GmbH",
+        "link": "https://www.compleet.com",
+        "location": "München, Njemačka",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Laravel",
+          "Spring",
+          "Postgresql",
+          "DynamoDB",
+          "Docker",
+          "Kubernetes"
+        ],
+        "description": "Sudjelovao sam u dva projekta usmjerena na modernizaciju zastarjelih sustava. Izradio sam skalabilni backend koristeći Spring Boot, razvijao REST API-je i autentifikacijske funkcije, te implementirao servis putem Dockera i Kubernetes-a. Integrirao sam se s partnerima poput Indeed-a i Stepstone-a putem prilagođenih API-ja. Također sam radio na dugoročnom Laravel projektu koji je zamijenio ključni dio velikog monolita, s naglaskom na korisničke funkcionalnosti i pripremu za produkciju."
+      },
+      "developer": {
+        "date": "07.2021 - 03.2023",
+        "duration": "2 godine",
+        "role": "Junior Software Engineer",
+        "company": "compleet GmbH",
+        "link": "https://www.compleet.com",
+        "location": "München, Njemačka",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Zend",
+          "Postgresql",
+          "Docker"
+        ],
+        "description": "Radio sam na B2B web platformama u području zapošljavanja i upravljanja radnom snagom. Održavao sam i proširivao naslijeđenu PHP aplikaciju temeljenu na Zend Frameworku. Refaktorirao sam starije module, implementirao nove funkcionalnosti, ispravljao greške i sudjelovao u prijelazu dijelova monolita prema mikroservisima u kontejnerima."
+      },
+      "intern": {
+        "date": "08.2018 - 07.2021",
+        "duration": "3 godine",
+        "role": "Pripravnik i studij",
+        "company": "compleet GmbH (prije GermanPersonnel e-search GmbH)",
+        "link": "https://www.compleet.com",
+        "location": "München, Njemačka",
+        "tech": [
+          "HTML",
+          "CSS",
+          "PHP",
+          "Java",
+          "JavaScript",
+          "AngularJS",
+          "Postgresql"
+        ],
+        "description": "Radio sam kao pripravnik (tijekom studija), razvijajući full-stack aplikaciju pomoću PHP-a, AngularJS-a i PostgreSQL-a. Stekao sam praktično iskustvo u razvoju od početka do kraja i u agilnim radnim procesima. Pokazao sam inicijativu, surađivao s timovima i unaprijedio tehničke i komunikacijske vještine."
+      }
+    }
+  },
+  "contact": {
+    "headline": "Čujmo se! :)"
+  }
+}

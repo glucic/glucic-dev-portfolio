@@ -8,6 +8,7 @@ import {useEffect, useState} from 'react';
 const languages = [
     {code: 'en', label: 'English', flag: 'GB'},
     {code: 'de', label: 'Deutsch', flag: 'DE'},
+    {code: 'hr', label: 'Hrvatski', flag: 'HR'}
 ];
 
 export default function LanguageSelector() {
@@ -30,7 +31,7 @@ export default function LanguageSelector() {
         languages[0];
 
     const switchLanguage = (langCode: string) => {
-        const newPath = pathname.replace(/^\/(en|de)/, `/${langCode}`);
+        const newPath = pathname.replace(/^\/(en|de|hr)/, `/${langCode}`);
         router.push(newPath);
     };
 

@@ -1,8 +1,8 @@
 // middleware.ts
 import {NextRequest, NextResponse} from 'next/server';
 
-const locales = ['en', 'de'];
-const defaultLocale = 'en';
+const locales = ['en', 'de', 'hr'];
+const defaultLocale = 'de';
 
 export function middleware(request: NextRequest) {
     const {pathname} = request.nextUrl;

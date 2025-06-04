@@ -68,7 +68,13 @@ const techConfig: Record<string, { color: string; icon: React.ReactNode }> = {
     },
     Java: {
         color: "text-[#007396]", // Java blue
-        icon: <SiSpring size={25}/>,
+        icon:
+            <Image
+                src="/svg/java.svg"
+                alt="Java"
+                width={35}
+                height={35}
+            />
     },
     Spring: {
         color: "text-[#6DB33F]", // Spring green

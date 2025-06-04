@@ -11,7 +11,7 @@ const roboto = Roboto({
 });
 
 export async function generateStaticParams() {
-    return [{lang: 'en'}, {lang: 'de'}];
+    return [{lang: 'en'}, {lang: 'de'}, {lang: 'hr'}];
 }
 
 export const metadata: Metadata = {

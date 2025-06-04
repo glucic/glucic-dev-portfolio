@@ -109,10 +109,9 @@
         "tech": [
           "HTML",
           "CSS",
-          "Java",
-          "Spring",
           "PHP",
           "Laravel",
+          "Spring",
           "Postgresql",
           "DynamoDB",
           "Docker",
@@ -148,6 +147,7 @@
           "HTML",
           "CSS",
           "PHP",
+          "Java",
           "JavaScript",
           "AngularJS",
           "Postgresql"
