@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import {motion} from "framer-motion";
 import Link from "next/link";
 import React from "react";
 import {
@@ -16,16 +16,16 @@ export interface ContactDict {
     };
 }
 
-export function ContactSection({ dict }: { dict: ContactDict }) {
+export function ContactSection({dict}: { dict: ContactDict }) {
     return (
         <section
             id="contact"
-            className="min-h-screen w-full flex flex-col items-center justify-center bg-gray-700 dark:bg-[var(--background)] text-white px-4 sm:px-6 py-12 text-center transition-colors"
+            className="min-h-screen w-full flex flex-col items-center justify-center bg-[var(--secondary)] dark:bg-[var(--secondary)] text-white px-4 sm:px-6 py-12 text-center transition-colors"
         >
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: [20, -5, 0] }}
-                transition={{ duration: 0.5 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: [20, -5, 0]}}
+                transition={{duration: 0.5}}
             >
                 <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-8 sm:mb-10 md:mb-12 uppercase">
                     {dict.contact.headline}
@@ -33,9 +33,9 @@ export function ContactSection({ dict }: { dict: ContactDict }) {
             </motion.div>
 
             <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: [20, -5, 0] }}
-                transition={{ delay: 0.2 }}
+                initial={{opacity: 0, y: 20}}
+                animate={{opacity: 1, y: [20, -5, 0]}}
+                transition={{delay: 0.2}}
                 className="flex flex-wrap justify-center gap-6"
             >
                 <Link href="mailto:gabriellucic@protonmail.com?subject=Portfolio%20Contact&body=Hi%20Gabriel%2C">

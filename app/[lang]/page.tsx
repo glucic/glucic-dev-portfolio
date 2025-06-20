@@ -7,6 +7,7 @@ import {
     ContactSection,
     FooterSection,
     SkillsSection,
+    ProjectsSection,
 } from '@/components/sections';
 import {ThemeProvider} from 'next-themes';
 
@@ -29,6 +30,7 @@ export default async function Page({
                 <AboutSection dict={dict}/>
                 <SkillsSection dict={dict}/>
                 <ExperienceSection dict={dict}/>
+                <ProjectsSection dict={dict}/>
                 <ContactSection dict={dict}/>
                 <FooterSection/>
             </ThemeProvider>

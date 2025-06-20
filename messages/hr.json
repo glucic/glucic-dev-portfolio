@@ -76,6 +76,74 @@
       }
     ]
   },
+  "projects": {
+    "headline": "Moji projekti",
+    "subtext": "Neki od njih su još u izradi",
+    "projects": {
+      "Single-Page Applications (SPA)": [
+        {
+          "title": "IL-Solar",
+          "description": "Responzivna jednostranična aplikacija za IL-Solar, izrađena pomoću Next.js i Tailwind CSS-a, prikazuje profesionalne usluge čišćenja i održavanja solarnih panela s dinamičnim usporedbama slika, glatkom navigacijom po sekcijama i višejezičnom podrškom.",
+          "tech": [
+            "NextJS",
+            "JavaScript",
+            "Tailwind"
+          ],
+          "imageUrl": "/il-solar.png",
+          "links": [
+            {
+              "label": "Poveznica na web stranicu",
+              "href": "https://il-solar.at"
+            },
+            {
+              "label": "GitHub repozitorij",
+              "href": "https://github.com/glucic/il-solar"
+            }
+          ]
+        },
+        {
+          "title": "Portfolio",
+          "description": "Elegantna i moderna portfolio stranica izrađena s Next.js i Tailwind CSS-om, s minimalističkim dizajnom i glatkim korisničkim iskustvom.",
+          "tech": [
+            "NextJS",
+            "JavaScript",
+            "Tailwind"
+          ],
+          "imageUrl": "/portfolio-website.png",
+          "links": [
+            {
+              "label": "Poveznica na web stranicu",
+              "href": "https://gabriel-lucic.dev"
+            },
+            {
+              "label": "GitHub repozitorij",
+              "href": "https://github.com/glucic/glucic-dev-portfolio"
+            }
+          ]
+        }
+      ],
+      "Full-Stack Web Applications": [
+        {
+          "title": "Giraphy (u izradi)",
+          "description": "Bogata društvena mreža razvijena pomoću Laravel-a i Twig-a, koja kombinira modernu arhitekturu s responzivnim i intuitivnim korisničkim sučeljem.",
+          "tech": [
+            "PHP",
+            "Laravel",
+            "Twig",
+            "Postgresql",
+            "Docker"
+          ],
+          "imageUrl": "/giraphy.png",
+          "links": [
+            {
+              "label": "GitHub repozitorij",
+              "href": "https://github.com/glucic/giraphy4"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "experience": {
     "headline": "Radno iskustvo",
     "subtext": "Pogled na moje prethodne uloge i tehnologije s kojima sam radio.",

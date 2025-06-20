@@ -76,6 +76,74 @@
       }
     ]
   },
+  "projects": {
+    "headline": "My Projects",
+    "subtext": "Some of them are still a work in progress",
+    "projects": {
+      "Single-Page Applications (SPA)": [
+        {
+          "title": "IL-Solar",
+          "description": "A responsive Single-Page Application for IL-Solar, built with Next.js and Tailwind CSS, showcasing professional solar panel cleaning and maintenance services with dynamic image comparisons, smooth section-based navigation, and multilingual support.",
+          "tech": [
+            "NextJS",
+            "JavaScript",
+            "Tailwind"
+          ],
+          "imageUrl": "/il-solar.png",
+          "links": [
+            {
+              "label": "Website Link",
+              "href": "https://il-solar.at"
+            },
+            {
+              "label": "GitHub Repo",
+              "href": "https://github.com/glucic/il-solar"
+            }
+          ]
+        },
+        {
+          "title": "Portfolio",
+          "description": "A sleek and modern portfolio website built with Next.js and Tailwind CSS, featuring a minimalist design and smooth user experience.",
+          "tech": [
+            "NextJS",
+            "JavaScript",
+            "Tailwind"
+          ],
+          "imageUrl": "/portfolio-website.png",
+          "links": [
+            {
+              "label": "Website Link",
+              "href": "https://gabriel-lucic.dev"
+            },
+            {
+              "label": "GitHub Repo",
+              "href": "https://github.com/glucic/glucic-dev-portfolio"
+            }
+          ]
+        }
+      ],
+      "Full-Stack Web Applications": [
+        {
+          "title": "Giraphy (WIP)",
+          "description": "A feature-rich social media platform developed using Laravel and Twig, combining modern architecture with a responsive and intuitive user interface.",
+          "tech": [
+            "PHP",
+            "Laravel",
+            "Twig",
+            "Postgresql",
+            "Docker"
+          ],
+          "imageUrl": "/giraphy.png",
+          "links": [
+            {
+              "label": "GitHub Repo",
+              "href": "https://github.com/glucic/giraphy4"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "experience": {
     "headline": "Work Experience",
     "subtext": "A look at my previous roles and the technologies I've worked with.",

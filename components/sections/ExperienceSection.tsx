@@ -3,31 +3,9 @@
 import { Timeline } from "@/components/ui/timeline";
 import { SkillBadge } from "@/components/elements/SkillBadges";
 import { MapPin } from "lucide-react";
+import {ExperienceSectionDict} from "@/types";
 
-interface ExperienceSectionProps {
-    dict: ExperienceDict;
-}
-
-export interface ExperienceDict {
-    experience: {
-        headline: string;
-        subtext?: string;
-        entries: {
-            [key: string]: {
-                date: string;
-                duration: string;
-                role: string;
-                company: string;
-                link?: string;
-                location: string;
-                description: string;
-                tech: Array<string>;
-            };
-        };
-    };
-}
-
-export function ExperienceSection({ dict }: ExperienceSectionProps) {
+export function ExperienceSection({dict}: { dict: ExperienceSectionDict }) {
     const entries = Object.values(dict.experience.entries);
 
     const experienceData = entries.map((entry) => ({

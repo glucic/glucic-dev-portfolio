@@ -1,16 +1,7 @@
 "use client";
 
 import Image from "next/image";
-
-export interface AboutSectionDict {
-    about: {
-        name: string;
-        role: string;
-        intro: string;
-        experience: string;
-        goals: string;
-    };
-}
+import {AboutSectionDict} from "@/types";
 
 export function AboutSection({ dict }: { dict: AboutSectionDict }) {
     return (

@@ -3,19 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SkillBadge } from "@/components/elements/SkillBadges";
-
-export interface SkillsSectionDict {
-    skills: {
-        headline: string;
-        subtext: string;
-        skills: Array<{
-            title: string;
-            description: string;
-            icon: string;
-            tech?: Array<string>;
-        }>;
-    };
-}
+import {SkillsSectionDict} from "@/types";
 
 export function SkillsSection({ dict }: { dict: SkillsSectionDict }) {
     return (

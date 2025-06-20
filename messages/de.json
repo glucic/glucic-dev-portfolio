@@ -69,6 +69,74 @@
       }
     ]
   },
+  "projects": {
+    "headline": "Meine Projekte",
+    "subtext": "Einige davon sind noch in Arbeit",
+    "projects": {
+      "Single-Page Applications (SPA)": [
+        {
+          "title": "IL-Solar",
+          "description": "Eine responsive Single-Page-Anwendung für IL-Solar, entwickelt mit Next.js und Tailwind CSS. Präsentiert professionelle Reinigungs- und Wartungsservices für Solaranlagen mit dynamischen Bildvergleichen, sanfter Navigation durch Abschnitte und mehrsprachiger Unterstützung.",
+          "tech": [
+            "NextJS",
+            "JavaScript",
+            "Tailwind"
+          ],
+          "imageUrl": "/il-solar.png",
+          "links": [
+            {
+              "label": "Website-Link",
+              "href": "https://il-solar.at"
+            },
+            {
+              "label": "GitHub-Repository",
+              "href": "https://github.com/glucic/il-solar"
+            }
+          ]
+        },
+        {
+          "title": "Portfolio",
+          "description": "Eine schlanke und moderne Portfolio-Website, erstellt mit Next.js und Tailwind CSS. Bietet ein minimalistisches Design und eine flüssige Benutzererfahrung.",
+          "tech": [
+            "NextJS",
+            "JavaScript",
+            "Tailwind"
+          ],
+          "imageUrl": "/portfolio-website.png",
+          "links": [
+            {
+              "label": "Website-Link",
+              "href": "https://gabriel-lucic.dev"
+            },
+            {
+              "label": "GitHub-Repository",
+              "href": "https://github.com/glucic/glucic-dev-portfolio"
+            }
+          ]
+        }
+      ],
+      "Full-Stack Web Applications": [
+        {
+          "title": "Giraphy (in Arbeit)",
+          "description": "Eine funktionsreiche Social-Media-Plattform, entwickelt mit Laravel und Twig. Vereint moderne Architektur mit einer reaktionsfähigen und intuitiven Benutzeroberfläche.",
+          "tech": [
+            "PHP",
+            "Laravel",
+            "Twig",
+            "Postgresql",
+            "Docker"
+          ],
+          "imageUrl": "/giraphy.png",
+          "links": [
+            {
+              "label": "GitHub-Repository",
+              "href": "https://github.com/glucic/giraphy4"
+            }
+          ]
+        }
+      ]
+    }
+  },
   "experience": {
     "headline": "Berufserfahrung",
     "subtext": "Meine bisherigen Rollen und Tech-Stacks.",

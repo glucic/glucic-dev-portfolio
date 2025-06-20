@@ -5,20 +5,7 @@ import React from "react";
 import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
 import {useIsMobile} from "@/lib/utils";
 import {NavigationBar} from "@/components/elements/NavigationBar";
-
-export interface MainSectionDict {
-    main: {
-        title: string;
-        subtitle: string;
-        typewriterSubtitle: Array<{
-            text: string;
-            className?: string;
-        }>;
-        location: string;
-        downloadCV: string;
-        contactMe: string;
-    };
-}
+import {MainSectionDict} from "@/types";
 
 export function MainSection({dict}: { dict: MainSectionDict }) {
     const isMobile = useIsMobile();
