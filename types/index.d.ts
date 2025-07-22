@@ -9,6 +9,10 @@ export interface MainSectionDict {
         location: string;
         downloadCV: string;
         contactMe: string;
+        navItems: Array<{
+            label: string;
+            href: string;
+        }>;
     };
 }
 

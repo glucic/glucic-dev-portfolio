@@ -108,7 +108,7 @@ export const NavBody = ({children, className, visible}: NavBodyProps) => {
     );
 };
 
-export const NavItems = ({items, className, onItemClick}: NavItemsProps) => {
+export const NavItems = ({items = [], className, onItemClick}: NavItemsProps) => {
     const [hovered, setHovered] = useState<number | null>(null);
 
     return (
@@ -119,7 +119,7 @@ export const NavItems = ({items, className, onItemClick}: NavItemsProps) => {
                 className
             )}
         >
-            {items.map((item, idx) => (
+            {Array.isArray(items) && items.map((item, idx) => (
                 <Link
                     onMouseEnter={() => setHovered(idx)}
                     onClick={onItemClick}

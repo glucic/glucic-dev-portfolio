@@ -14,26 +14,9 @@ import { useState } from 'react';
 import LanguageSwitcher from '@/components/elements/LanguageSwitcher';
 import { ThemeToggle } from "@/components/elements/ThemeToggle";
 
-export const navItems = [
-    {
-        name: 'About',
-        link: '#about',
-    },
-    {
-        name: 'Skills',
-        link: '#skills'
-    },
-    {
-        name: 'Experience',
-        link: '#experience',
-    },
-    {
-        name: 'Contact',
-        link: '#contact',
-    },
-];
 
-export function NavigationBar() {
+
+export function NavigationBar({ navItems = [] }: { navItems?: Array<{ label: string; href: string }> }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
@@ -43,7 +26,7 @@ export function NavigationBar() {
                 <NavBody>
                     <NavbarLogo />
                     <div className="flex items-center gap-4">
-                        <NavItems items={navItems} />
+                        <NavItems items={Array.isArray(navItems) ? navItems.map(item => ({ name: item.label, link: item.href })) : []} />
                     </div>
                     <div className="flex flex-row gap-5">
                         <ThemeToggle />
@@ -66,14 +49,14 @@ export function NavigationBar() {
                         onClose={() => setIsMobileMenuOpen(false)}
                         className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6 bg-[var(--background)] text-[var(--foreground)] rounded-lg transition-colors"
                     >
-                        {navItems.map((item, idx) => (
+                        {Array.isArray(navItems) && navItems.map((item, idx) => (
                             <a
                                 key={`mobile-link-${idx}`}
-                                href={item.link}
+                                href={item.href}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="block text-base text-[var(--muted-foreground)] py-2 transition-colors hover:text-[var(--foreground)]"
                             >
-                                {item.name}
+                                {item.label}
                             </a>
                         ))}
                         <div className="flex flex-row mt-4 gap-5">

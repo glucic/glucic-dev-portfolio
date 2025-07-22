@@ -20,6 +20,15 @@
     "location": "Basierend in München, Deutschland",
     "downloadCV": "Lebenslauf ansehen",
     "contactMe": "Kontaktieren Sie mich"
+    ,
+    "navItems": [
+      { "label": "Startseite", "href": "#main" },
+      { "label": "Über mich", "href": "#about" },
+      { "label": "Fähigkeiten", "href": "#skills" },
+      { "label": "Projekte", "href": "#projects" },
+      { "label": "Erfahrung", "href": "#experience" },
+      { "label": "Kontakt", "href": "#contact" }
+    ]
   },
   "about": {
     "name": "Gabriel Lucic",
