@@ -1,4 +1,14 @@
 {
+  "navigation": {
+    "navItems": [
+      { "label": "Home", "href": "#main" },
+      { "label": "About", "href": "#about" },
+      { "label": "Skills", "href": "#skills" },
+      { "label": "Projects", "href": "#projects" },
+      { "label": "Experience", "href": "#experience" },
+      { "label": "Contact", "href": "#contact" }
+    ]
+  },
   "main": {
     "title": "Gabriel Lucic",
     "subtitle": "Software Developer Specializing in Web Applications.",
@@ -27,15 +37,6 @@
     "location": "Based in Munich, Germany",
     "downloadCV": "View Resume",
     "contactMe": "Contact Me"
-    ,
-    "navItems": [
-      { "label": "Home", "href": "#main" },
-      { "label": "About", "href": "#about" },
-      { "label": "Skills", "href": "#skills" },
-      { "label": "Projects", "href": "#projects" },
-      { "label": "Experience", "href": "#experience" },
-      { "label": "Contact", "href": "#contact" }
-    ]
   },
   "about": {
     "name": "Gabriel Lucic",

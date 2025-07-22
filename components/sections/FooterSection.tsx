@@ -1,8 +1,8 @@
-import {NavBody, NavItems} from "@/components/ui/resizable-navbar";
+import { NavBody, NavItems } from "@/components/ui/resizable-navbar";
 import React from "react";
-import {navItems} from "@/components/elements/NavigationBar";
+import { NavigationDict } from "@/types";
 
-export const FooterSection = () => {
+export const FooterSection = ({ dict }: { dict: NavigationDict }) => {
     const currentYear = new Date().getFullYear();
 
     return (
@@ -18,7 +18,7 @@ export const FooterSection = () => {
                 <nav aria-label="Footer navigation" className="w-full md:w-auto md:ml-auto">
                     <NavBody>
                         <ul className="flex flex-wrap justify-center md:justify-end gap-4 text-sm">
-                            <NavItems items={navItems}/>
+                            <NavItems items={Array.isArray(dict.navigation.navItems) ? dict.navigation.navItems.map(item => ({ name: item.label, link: item.href })) : []} />
                         </ul>
                     </NavBody>
                 </nav>

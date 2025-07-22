@@ -1,6 +1,7 @@
 // app/[lang]/page.tsx
 import {getDictionary} from './dictionaries';
 import {
+    NavigationBar,
     MainSection,
     AboutSection,
     ExperienceSection,
@@ -8,7 +9,7 @@ import {
     FooterSection,
     SkillsSection,
     ProjectsSection,
-} from '@/components/sections';
+} from '@/components';
 import {ThemeProvider} from 'next-themes';
 
 export async function generateStaticParams() {
@@ -26,13 +27,14 @@ export default async function Page({
     return (
         <div>
             <ThemeProvider attribute="class" defaultTheme="light" enableSystem={false}>
+                <NavigationBar dict={dict}/>
                 <MainSection dict={dict}/>
                 <AboutSection dict={dict}/>
                 <SkillsSection dict={dict}/>
                 <ExperienceSection dict={dict}/>
                 <ProjectsSection dict={dict}/>
                 <ContactSection dict={dict}/>
-                <FooterSection/>
+                <FooterSection dict={dict}/>
             </ThemeProvider>
         </div>
     );

@@ -4,7 +4,6 @@ import {motion} from "framer-motion";
 import React from "react";
 import {TypewriterEffectSmooth} from "@/components/ui/typewriter-effect";
 import {useIsMobile} from "@/lib/utils";
-import {NavigationBar} from "@/components/elements/NavigationBar";
 import {MainSectionDict} from "@/types";
 
 export function MainSection({dict}: { dict: MainSectionDict }) {
@@ -12,7 +11,6 @@ export function MainSection({dict}: { dict: MainSectionDict }) {
 
     return (
         <section id="main" className="bg-[var(--background)] text-[var(--foreground)] transition-colors duration-300">
-            <NavigationBar navItems={dict.main.navItems}/>
             <div
                 className="min-h-screen flex flex-col items-center justify-center px-6 py-12 sm:py-16 md:py-20 lg:py-24 text-center w-full max-w-4xl mx-auto">
 

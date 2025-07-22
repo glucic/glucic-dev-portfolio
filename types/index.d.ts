@@ -1,3 +1,12 @@
+export interface NavigationDict {
+    navigation: {
+        navItems: Array<{ 
+            label: string;
+            href: string;
+        }>;
+    };
+}
+
 export interface MainSectionDict {
     main: {
         title: string;
@@ -9,10 +18,6 @@ export interface MainSectionDict {
         location: string;
         downloadCV: string;
         contactMe: string;
-        navItems: Array<{
-            label: string;
-            href: string;
-        }>;
     };
 }
 

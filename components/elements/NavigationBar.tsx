@@ -13,10 +13,9 @@ import {
 import { useState } from 'react';
 import LanguageSwitcher from '@/components/elements/LanguageSwitcher';
 import { ThemeToggle } from "@/components/elements/ThemeToggle";
+import {NavigationDict} from "@/types";
 
-
-
-export function NavigationBar({ navItems = [] }: { navItems?: Array<{ label: string; href: string }> }) {
+export function NavigationBar({ dict }: { dict: NavigationDict }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
     return (
@@ -26,7 +25,7 @@ export function NavigationBar({ navItems = [] }: { navItems?: Array<{ label: str
                 <NavBody>
                     <NavbarLogo />
                     <div className="flex items-center gap-4">
-                        <NavItems items={Array.isArray(navItems) ? navItems.map(item => ({ name: item.label, link: item.href })) : []} />
+                        <NavItems items={Array.isArray(dict.navigation.navItems) ? dict.navigation.navItems.map(item => ({ name: item.label, link: item.href })) : []} />
                     </div>
                     <div className="flex flex-row gap-5">
                         <ThemeToggle />
@@ -49,7 +48,7 @@ export function NavigationBar({ navItems = [] }: { navItems?: Array<{ label: str
                         onClose={() => setIsMobileMenuOpen(false)}
                         className="max-h-[75vh] overflow-y-auto px-4 pt-4 pb-6 bg-[var(--background)] text-[var(--foreground)] rounded-lg transition-colors"
                     >
-                        {Array.isArray(navItems) && navItems.map((item, idx) => (
+                        {Array.isArray(dict.navigation.navItems) && dict.navigation.navItems.map((item, idx) => (
                             <a
                                 key={`mobile-link-${idx}`}
                                 href={item.href}
